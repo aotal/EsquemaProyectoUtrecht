@@ -1,5 +1,7 @@
-Content in Jupyter Book
+Contenido del proyecto
 =======================
 
-There are many ways to write content in Jupyter Book. This short section
-covers a few tips for how to do so.
+Está organizado en tres bloques:
+  - Preparación de datos.
+  - Segmentación mediante Cnn
+  - Posicionamiento del aplicador con los datos de la red neuronal

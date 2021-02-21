@@ -3,5 +3,6 @@
 - file: intro
 - file: content
   sections:
-    - file: markdown
-    - file: notebooks
+    - file: Anotation_nb
+    - file: cnn
+    - file: recon

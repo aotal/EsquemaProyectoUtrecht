@@ -1,7 +1,4 @@
-Welcome to your Jupyter Book
+Proyecto de reconstruction automática del aplicador Utrecht
 ============================
 
-This is a small sample book to give you a feel for how book content is
-structured.
-
-Check out the content pages bundled with this sample book to get started.
+Este es un pequeño intento de estructurar las fases en las que consistiría una automatización completa de reconstrucción automática directa sobre imágenes de RM
