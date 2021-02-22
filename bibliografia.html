@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identificación del aplicador sobre MRI: Segmentación del aplicador &#8212; Esquema Proyecto Utrecht</title>
+    <title>Bibliografía &#8212; Esquema Proyecto Utrecht</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Reconstrucción" href="recon.html" />
-    <link rel="prev" title="Herramienta de anotación" href="Anotation_nb.html" />
+    <link rel="prev" title="Reconstrucción" href="recon.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,8 +97,8 @@
      Herramienta de anotación
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnn.html">
      Identificación del aplicador sobre MRI: Segmentación del aplicador
     </a>
    </li>
@@ -108,8 +107,8 @@
      Reconstrucción
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bibliografia.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Bibliografía
     </a>
    </li>
@@ -157,7 +156,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/cnn.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/bibliografia.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -182,30 +181,6 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contenido
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plataformas">
-   Plataformas
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#candidatas">
-   Candidatas
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hardware">
-   Hardware
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -213,25 +188,20 @@
         
               <div>
                 
-  <div class="section" id="identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador">
-<h1>Identificación del aplicador sobre MRI: Segmentación del aplicador<a class="headerlink" href="#identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="plataformas">
-<h2>Plataformas<a class="headerlink" href="#plataformas" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Como recien llegados al mundo del deep learning, no tenemos todavía claro qué librería usar. Por lo que hemos visto las predominantes son <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a> y <a class="reference external" href="https://pytorch.org/">Pytorch</a>. Por otra parte sabemos de la existencia de la plataforma de NVIDIA llamada <a class="reference external" href="https://developer.nvidia.com/clara">Clara</a> que está pensada para uso médico y que puede integrar a las dos anteriores.</p>
-</div>
-<div class="section" id="candidatas">
-<h2>Candidatas<a class="headerlink" href="#candidatas" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Revisando los modelos de segmentación mediante redes neuronales convolucionales (CNN), pensamos que las topologías de red adecuadas serían U-net<span id="id1">[<a class="reference internal" href="bibliografia.html#id4"><span>RFB15</span></a>]</span> o su equivalente en 3D V-net<span id="id2">[<a class="reference internal" href="bibliografia.html#id5"><span>MilletariNavabAhmadi16</span></a>]</span></p>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png"><img alt="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" src="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" /></a>
-<p class="caption"><span class="caption-number">Figura 2 </span><span class="caption-text">Esquema de la topología de red U-net</span><a class="headerlink" href="#id3" title="Enlace permanente a esta imagen">¶</a></p>
-</div>
-<p>En una búsqueda de internet rápida se ve que los dos modelos están implementados tanto en Tensorflow como en Pytorch.</p>
-</div>
-<div class="section" id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Está claro que para la fase de entrenamiento un hardware potente que permita la paralelización del cálculo es la clave para reducir el tiempo de entrenamiento, pero de momento no lo hemos dimensionado. El uso de más de una GPU parece que no es opcional.</p>
-</div>
+  <div class="section" id="bibliografia">
+<h1>Bibliografía<a class="headerlink" href="#bibliografia" title="Enlazar permanentemente con este título">¶</a></h1>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets">HKB+10</span></dt>
+<dd><p>Taran Paulsen Hellebust, Christian Kirisits, Daniel Berger, José Pérez-Calatayud, Marisol De Brabandere, Astrid De Leeuw, Isabelle Dumas, Robert Hudej, Gerry Lowe, Rachel Wills, and Kari Tanderup. Recommendations from Gynaecological (GYN) GEC-ESTRO Working Group: Considerations and pitfalls in commissioning and applicator reconstruction in 3D image-based treatment planning of cervix cancer brachytherapy. <em>Radiotherapy and Oncology</em>, 96(2):153–160, 2010. URL: <a class="reference external" href="https://www.thegreenjournal.com/article/S0167-8140(10)00368-3/fulltext">https://www.thegreenjournal.com/article/S0167-8140(10)00368-3/fulltext</a> (visited on 2018-07-07), <a class="reference external" href="https://arxiv.org/abs/20663578">arXiv:20663578</a>, <a class="reference external" href="https://doi.org/10.1016/j.radonc.2010.06.004">doi:10.1016/j.radonc.2010.06.004</a>.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">RFB15</span></dt>
+<dd><p>Olaf Ronneberger, Philipp Fischer, and Thomas Brox. U-net: convolutional networks for biomedical image segmentation. <em>CoRR</em>, 2015. URL: <a class="reference external" href="http://arxiv.org/abs/1505.04597">http://arxiv.org/abs/1505.04597</a>, <a class="reference external" href="https://arxiv.org/abs/1505.04597">arXiv:1505.04597</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">MilletariNavabAhmadi16</span></dt>
+<dd><p>F. Milletari, N. Navab, and S. Ahmadi. V-net: fully convolutional neural networks for volumetric medical image segmentation. In <em>2016 Fourth International Conference on 3D Vision (3DV)</em>, volume, 565–571. 2016. <a class="reference external" href="https://doi.org/10.1109/3DV.2016.79">doi:10.1109/3DV.2016.79</a>.</p>
+</dd>
+</dl>
+</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,8 +232,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Anotation_nb.html" title="previous page">Herramienta de anotación</a>
-    <a class='right-next' id="next-link" href="recon.html" title="next page">Reconstrucción</a>
+    <a class='left-prev' id="prev-link" href="recon.html" title="previous page">Reconstrucción</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
