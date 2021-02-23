@@ -10,8 +10,8 @@ If you'd like to develop on and build the Esquema proyecto Utrecht book, you sho
 
 - Clone this repository and run
 - Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-- (Recommended) Remove the existing `Esquema proyecto Utrecht/_build/` directory
-- Run `jupyter-book build Esquema proyecto Utrecht/`
+- (Recommended) Remove the existing `Utrecht/_build/` directory
+- Run `jupyter-book build Utrecht/`
 
 A fully-rendered HTML version of the book will be built in `Esquema proyecto Utrecht/_build/html/`.
 
@@ -22,7 +22,7 @@ The html version of the book is hosted on the `gh-pages` branch of this repo. A 
 If you wish to disable this automation, you may remove the GitHub actions workflow and build the book manually by:
 
 - Navigating to your local build; and running,
-- `ghp-import -n -p -f Esquema proyecto Utrecht/_build/html`
+- `ghp-import -n -p -f Utrecht/_build/html`
 
 This will automatically push your build to the `gh-pages` branch. More information on this hosting process can be found [here](https://jupyterbook.org/publish/gh-pages.html#manually-host-your-book-with-github-pages).
 
