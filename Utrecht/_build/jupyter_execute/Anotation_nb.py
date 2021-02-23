@@ -36,12 +36,12 @@ En un módulo de segmentación anatómica, un experto delimita la estructura cor
 
 ### Búsqueda de los canales de la parte intracavitaria
 
-YouTubeVideo('FL8_dLCzlzA', width=800, height=300)
+YouTubeVideo('FL8_dLCzlzA', width=515, height=290)
 
 ## Posicionamiento de la parte intracavitaria
 
-YouTubeVideo('Kd5etPcEsRM', width=800, height=300)
+YouTubeVideo('Kd5etPcEsRM', width=515, height=290)
 
 ## Reconstrucción de agujas
 
-YouTubeVideo('6aw-_IdMBuI', width=800, height=300)
+YouTubeVideo('6aw-_IdMBuI', width=515, height=290)
