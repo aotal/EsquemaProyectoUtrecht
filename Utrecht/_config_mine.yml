@@ -1,0 +1,38 @@
+#######################################################################################
+# A default configuration that will be loaded for all jupyter books
+# See the documentation for help and more options:
+# https://jupyterbook.org/customize/config.html
+
+#######################################################################################
+# Book settings
+title                       : Esquema Proyecto Utrecht  # The title of the book. Will be placed in the left navbar.
+author                      : Antonio Otal  # The author of the book
+copyright                   : "2021"  # Copyright year to be placed in the footer
+logo                        : irimed.png  # A path to the book logo
+
+
+
+html:
+  extra_navbar: Parte de la línea de investigación del <a href="http://www.uv.es/radiofisica/index.html">IRIMED</a>  # Will be displayed underneath the left navbar.
+  use_repository_button: true  # Whether to add a link to your repository button
+
+latex:
+  latex_documents:
+    targetname: book.tex
+launch_buttons:
+  thebe:  false
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+repository:
+  url                       : https://github.com/aotal/EsquemaProyectoUtrecht  # The URL to your book's repository
+  branch                    : master  # Which branch of the repository should be used when creating links
+
+sphinx:
+  config:
+    html_show_copyright: false
+    language: es
+    html_theme: sphinx_book_theme # Para que aparezca en castellano hay que usar el fork de mi cuenta de github
+    html_theme_options:
+      search_bar_text: Buscar en la página...
+
+bibtex_bibfiles:
+   - references.bib
