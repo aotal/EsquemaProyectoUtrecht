@@ -54,6 +54,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/ovoid.png"/>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Reconstrucción" href="recon.html" />
@@ -122,7 +123,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Parte de la línea de investigación del <a href="http://www.uv.es/radiofisica/index.html">IRIMED</a>
 </div>
 
 </div>
@@ -191,15 +192,27 @@
   <a class="reference internal nav-link" href="#plataformas">
    Plataformas
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video-demostrativo-del-uso-de-clara-toolkits">
+     Video demostrativo del uso de Clara Toolkits
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#candidatas">
-   Candidatas
+  <a class="reference internal nav-link" href="#candidatas-a-redes">
+   Candidatas a redes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hardware">
    Hardware
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numero-de-casos-para-entrenar">
+   Número de casos para entrenar
   </a>
  </li>
 </ul>
@@ -213,24 +226,71 @@
         
               <div>
                 
-  <div class="section" id="identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador">
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador">
 <h1>Identificación del aplicador sobre MRI: Segmentación del aplicador<a class="headerlink" href="#identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Como ya comentamos en la introducción, no pensamos que podamos obtener directamente las transformaciones afines de las imágenes y es por ello que buscamos una segmentación intermedia del aplicador sobre la MRI.</p>
 <div class="section" id="plataformas">
 <h2>Plataformas<a class="headerlink" href="#plataformas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Como recien llegados al mundo del deep learning, no tenemos todavía claro qué librería usar. Por lo que hemos visto las predominantes son <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a> y <a class="reference external" href="https://pytorch.org/">Pytorch</a>. Por otra parte sabemos de la existencia de la plataforma de NVIDIA llamada <a class="reference external" href="https://developer.nvidia.com/clara">Clara</a> que está pensada para uso médico y que puede integrar a las dos anteriores.</p>
+<div class="section" id="video-demostrativo-del-uso-de-clara-toolkits">
+<h3>Video demostrativo del uso de Clara Toolkits<a class="headerlink" href="#video-demostrativo-del-uso-de-clara-toolkits" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="515"
+    height="290"
+    src="https://www.youtube.com/embed/T0Pjki4vXx0"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
 </div>
-<div class="section" id="candidatas">
-<h2>Candidatas<a class="headerlink" href="#candidatas" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+</div>
+<div class="section" id="candidatas-a-redes">
+<h2>Candidatas a redes<a class="headerlink" href="#candidatas-a-redes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Revisando los modelos de segmentación mediante redes neuronales convolucionales (CNN), pensamos que las topologías de red adecuadas serían U-net<span id="id1">[<a class="reference internal" href="bibliografia.html#id4"><span>RFB15</span></a>]</span> o su equivalente en 3D V-net<span id="id2">[<a class="reference internal" href="bibliografia.html#id5"><span>MilletariNavabAhmadi16</span></a>]</span></p>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png"><img alt="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" src="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" /></a>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id3">
+<img alt="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" src="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" />
 <p class="caption"><span class="caption-number">Figura 2 </span><span class="caption-text">Esquema de la topología de red U-net</span><a class="headerlink" href="#id3" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id4">
+<img alt="https://vitalab.github.io/article/images/vnet/vnet.png" src="https://vitalab.github.io/article/images/vnet/vnet.png" />
+<p class="caption"><span class="caption-number">Figura 3 </span><span class="caption-text">V-net. La diferencia frente a U-net es que utiliza kernels de 3x3x3</span><a class="headerlink" href="#id4" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>En una búsqueda de internet rápida se ve que los dos modelos están implementados tanto en Tensorflow como en Pytorch.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Ejemplos en Tensorflow para <a class="reference external" href="https://github.com/jakeret/tf_unet">u-net</a> y <a class="reference external" href="https://github.com/jackyko1991/vnet-tensorflow">v-net</a>. En el caso de Pytorch
+<a class="reference external" href="https://pytorch.org/hub/mateuszbuda_brain-segmentation-pytorch_unet/">u-net</a> y <a class="reference external" href="https://github.com/mattmacy/vnet.pytorch">v-net</a></p>
+</div>
 </div>
 <div class="section" id="hardware">
 <h2>Hardware<a class="headerlink" href="#hardware" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Está claro que para la fase de entrenamiento un hardware potente que permita la paralelización del cálculo es la clave para reducir el tiempo de entrenamiento, pero de momento no lo hemos dimensionado. El uso de más de una GPU parece que no es opcional.</p>
+</div>
+<div class="section" id="numero-de-casos-para-entrenar">
+<h2>Número de casos para entrenar<a class="headerlink" href="#numero-de-casos-para-entrenar" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por la literatura, vemos que con el adecuado uso del Transfer learning, una entre 100 y 200 secuencias anotadas parecen ser suficientes. Por otra parte, recordemos que la estructura que buscamos segmentar en la imagen es rígida y conocida, por lo que es posible que incluso con menos casos fuese suficiente.</p>
 </div>
 </div>
 
@@ -270,8 +330,9 @@
     <div class="container">
       <p>
         
-          By Antonio Otal<br/>
-        
+          <div class="extra_footer">
+            Esto es solamente un borrador del proyecto
+          </div>
       </p>
     </div>
   </footer>
