@@ -67,7 +67,7 @@ latex:
 launch_buttons:
   notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
-  colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
+  colab_url                 : "https://colab.research.google.com" # The URL of Google Colab (https://colab.research.google.com)
 
 repository:
   url                       : https://github.com/aotal/EsquemaProyectoUtrecht  # The URL to your book's repository

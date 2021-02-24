@@ -4,6 +4,11 @@ from IPython.display import YouTubeVideo
 
 Como ya comentamos en la introducción, no pensamos que podamos obtener directamente las transformaciones afines de las imágenes y es por ello que buscamos una segmentación intermedia del aplicador sobre la MRI. 
 
+```{admonition} Puntualización
+:class: tip
+Existen publicaciones como esta referencia {cite}`andrearczyk2020local` que habría que explorar. Parece que existen CNNs que identifican rotaciones en imágenes, pero creo que tienen un esquema similar a las topologías de red típicas.
+```
+
 ## Plataformas
 
 Como recien llegados al mundo del deep learning, no tenemos todavía claro qué librería usar. Por lo que hemos visto las predominantes son [Tensorflow](https://www.tensorflow.org/) y [Pytorch](https://pytorch.org/). Por otra parte sabemos de la existencia de la plataforma de NVIDIA llamada [Clara](https://developer.nvidia.com/clara) que está pensada para uso médico y que puede integrar a las dos anteriores. 
