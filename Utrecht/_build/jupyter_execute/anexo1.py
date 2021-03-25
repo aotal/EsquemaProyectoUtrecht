@@ -3,6 +3,7 @@ from myst_nb import glue
 
 import uuid
 from datetime import datetime
+import pytz
 
 # Anexo 1: Creación y exportación Dicom
 
@@ -100,4 +101,19 @@ Por ejemplo **IRIMED** en ambos
 El mismo valor que InstanceCreationTime
 
 #### TimezoneOffsetFromUTC
-Habrá que verificar el horario en ese momento. No creemos que sea importante ya que no influye en la reconstrucción
+La función que nos da el valor del tag se muestra a continuación
+
+def DiferenciaUTC(X='Europe/Madrid'):
+    delta=pytz.timezone(X).utcoffset(datetime.today())
+    delta=delta.days*24+delta.seconds//3600
+    return "{:=+03d}00".format(delta)
+
+DiferenciaUTC()
+
+DiferenciaUTC('US/Pacific')
+
+### Tags sequence
+
+La lista de tags de secuencia son los siguientes
+
+<ul><li>ApplicationSetupSequence</li><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li></ul>

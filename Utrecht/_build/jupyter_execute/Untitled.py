@@ -97,3 +97,7 @@ plansimple.data_element('SOPInstanceUID').value
 
 plansimple.data_element('TimezoneOffsetFromUTC').value
 
+AS=plansimple.ApplicationSetupSequence[0]
+
+AS
+

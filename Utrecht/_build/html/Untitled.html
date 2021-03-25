@@ -4,7 +4,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&lt;no title&gt; &#8212; Esquema Proyecto Utrecht</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -40,12 +40,13 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -137,21 +138,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
             class="fas fa-download"></i></button>
@@ -169,25 +170,24 @@
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
+        <!-- Source interaction buttons -->
 
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                    title="Modo de pantalla completa"><i
-                        class="fas fa-expand"></i></button></a>
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+        <!-- Launch buttons -->
 
-        </div>
+    </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contenido
+            <i class="fas fa-list"></i> Contenido
         </div>
         <nav id="bd-toc-nav">
             <ul class="simple nav section-nav flex-column">
@@ -195,7 +195,6 @@
 
         </nav>
         
-        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -662,6 +661,123 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AS</span><span class="o">=</span><span class="n">plansimple</span><span class="o">.</span><span class="n">ApplicationSetupSequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0232) Application Setup Type              CS: &#39;GYNECOLOGY&#39;
+(300a, 0234) Application Setup Number            IS: &quot;0&quot;
+(300a, 0250) Total Reference Air Kerma           DS: &quot;0.0&quot;
+(300a, 0280)  Channel Sequence  3 item(s) ---- 
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;1&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;1&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;1&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;35.2713643012128&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;1&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;0&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;2&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;2&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;2&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;25.7096842210936&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;2&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;1&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;3&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;3&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;3&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;75.921050947076&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;3&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;2&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+(300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+(300b, 1002) Private tag data                    CS: &#39;TRUE&#39;
+(300b, 1009) Private tag data                    DS: &quot;4.0&quot;
+(300b, 1030) Private tag data                    DS: &quot;0.0&quot;
+(300b, 103b) Private tag data                    DS: &quot;0.0&quot;
+</pre></div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -672,26 +788,26 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "other-env"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "other-env",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'other-env'</script>
 
               </div>
               
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
         
-        <div class='prev-next-bottom'>
-            
 
-        </div>
-        
-        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

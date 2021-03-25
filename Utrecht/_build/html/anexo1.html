@@ -4,7 +4,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anexo 1: Creación y exportación Dicom &#8212; Esquema Proyecto Utrecht</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -40,12 +40,13 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -138,21 +139,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
             class="fas fa-download"></i></button>
@@ -170,25 +171,24 @@
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
+        <!-- Source interaction buttons -->
 
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                    title="Modo de pantalla completa"><i
-                        class="fas fa-expand"></i></button></a>
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+        <!-- Launch buttons -->
 
-        </div>
+    </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contenido
+            <i class="fas fa-list"></i> Contenido
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -303,13 +303,17 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tags-sequence">
+     Tags sequence
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
 
         </nav>
         
-        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -323,6 +327,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uuid</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
 </pre></div>
 </div>
 </div>
@@ -478,7 +483,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.1006409150.4538441387.0283226552.731930019&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.2019952498.7611205723.4577099332.300001428&#39;
 </pre></div>
 </div>
 </div>
@@ -513,7 +518,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210325 152542
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210325 213804
 </pre></div>
 </div>
 </div>
@@ -541,9 +546,47 @@
 </div>
 <div class="section" id="timezoneoffsetfromutc">
 <h4>TimezoneOffsetFromUTC<a class="headerlink" href="#timezoneoffsetfromutc" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Habrá que verificar el horario en ese momento. No creemos que sea importante ya que no influye en la reconstrucción</p>
+<p>La función que nos da el valor del tag se muestra a continuación</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">DiferenciaUTC</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s1">&#39;Europe/Madrid&#39;</span><span class="p">):</span>
+    <span class="n">delta</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">utcoffset</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+    <span class="n">delta</span><span class="o">=</span><span class="n">delta</span><span class="o">.</span><span class="n">days</span><span class="o">*</span><span class="mi">24</span><span class="o">+</span><span class="n">delta</span><span class="o">.</span><span class="n">seconds</span><span class="o">//</span><span class="mi">3600</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{:=+03d}</span><span class="s2">00&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DiferenciaUTC</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;+0100&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DiferenciaUTC</span><span class="p">(</span><span class="s1">&#39;US/Pacific&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;-0700&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tags-sequence">
+<h3>Tags sequence<a class="headerlink" href="#tags-sequence" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La lista de tags de secuencia son los siguientes</p>
+<ul><li>ApplicationSetupSequence</li><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li></ul></div>
 </div>
 </div>
 
@@ -556,27 +599,27 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "book"
+            mode: "other-env"
         },
         kernelOptions: {
-            kernelName: "book",
+            kernelName: "other-env",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'book'</script>
+    <script>kernelName = 'other-env'</script>
 
               </div>
               
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
         
-        <div class='prev-next-bottom'>
-            
     <a class='left-prev' id="prev-link" href="bibliografia.html" title="previous page">Bibliografía</a>
 
-        </div>
-        
-        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
