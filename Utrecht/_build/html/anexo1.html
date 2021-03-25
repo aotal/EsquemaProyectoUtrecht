@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anexo 1: Creación y exportación Dicom &#8212; Esquema Proyecto Utrecht</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/ovoid.png"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Bibliografía" href="bibliografia.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/irimed.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Esquema Proyecto Utrecht</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la página..." aria-label="Buscar en la página..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Planteamiento del problema
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Anotation_nb.html">
+     Herramienta de anotación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnn.html">
+     Identificación del aplicador sobre MRI: Segmentación del aplicador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recon.html">
+     Reconstrucción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bibliografia.html">
+     Bibliografía
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Anexo 1: Creación y exportación Dicom
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Parte de la línea de investigación del <a href="http://www.uv.es/radiofisica/index.html">IRIMED</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/anexo1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                    title="Modo de pantalla completa"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tags-comunes-entre-imagenes-y-plan">
+   Tags comunes entre imágenes y plan:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tags-de-diferente-valor">
+     Tags de diferente valor
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#manufacter-y-manufacturermodelname">
+       Manufacter y ManufacturerModelName
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modality">
+       Modality
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#seriesnumber">
+       SeriesNumber
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#softwareversion-y-stationname">
+       SoftwareVersion y StationName
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sopclassuid">
+       SOPClassUID
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="anexo-1-creacion-y-exportacion-dicom">
+<h1>Anexo 1: Creación y exportación Dicom<a class="headerlink" href="#anexo-1-creacion-y-exportacion-dicom" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Como proyecto paralelo a la reconstrucción completamente automática y utilizando la herramienta de <a class="reference internal" href="Anotation_nb.html#capitulo-anotation"><span class="std std-ref">anotación</span></a> que hemos desarrollado, podemos utilizar el resultado que proporciona la herramienta para hacer un uso clínico del mismo, es decir, incorporar la reconstrucción realizada al flujo de trabajo. Para ello vamos a investigar la estrura de los ficheros dicom de imágenes y ejemplos de exportación del plan para generar uno que pueda ser importado en Oncentra con la reconstrucción ya hecha.</p>
+</div>
+<div class="section" id="tags-comunes-entre-imagenes-y-plan">
+<h2>Tags comunes entre imágenes y plan:<a class="headerlink" href="#tags-comunes-entre-imagenes-y-plan" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Hay 23 tags comunes entre un fichero de secuencia de imágenes y uno tipo RTPlan. De ellos, 14 poseen el mismo valor y por lo tanto el mismo viene definido de la MRI. La lista es:</p>
+<ul><li>AccessionNumber</li><li>FrameOfReferenceUID</li><li>PatientBirthDate</li><li>PatientID</li><li>PatientName</li><li>PatientSex</li><li>PositionReferenceIndicator</li><li>ReferringPhysicianName</li><li>SpecificCharacterSet</li><li>StudyDate</li><li>StudyDescription</li><li>StudyID</li><li>StudyInstanceUID</li><li>StudyTime</li></ul><div class="section" id="tags-de-diferente-valor">
+<h3>Tags de diferente valor<a class="headerlink" href="#tags-de-diferente-valor" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los 9 que nos quedan son:</p>
+<ul><li>Manufacturer</li><li>ManufacturerModelName</li><li>Modality</li><li>SOPClassUID</li><li>SOPInstanceUID</li><li>SeriesInstanceUID</li><li>SeriesNumber</li><li>SoftwareVersions</li><li>StationName</li></ul><div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plan1</th>
+      <th>Plan2</th>
+      <th>Plan3</th>
+      <th>Imagen</th>
+    </tr>
+    <tr>
+      <th>tag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Manufacturer</th>
+      <td>Nucletron</td>
+      <td>Nucletron</td>
+      <td>Nucletron</td>
+      <td>GE MEDICAL SYSTEMS</td>
+    </tr>
+    <tr>
+      <th>ManufacturerModelName</th>
+      <td>Oncentra</td>
+      <td>Oncentra</td>
+      <td>Oncentra</td>
+      <td>Signa HDxt</td>
+    </tr>
+    <tr>
+      <th>Modality</th>
+      <td>RTPLAN</td>
+      <td>RTPLAN</td>
+      <td>RTPLAN</td>
+      <td>MR</td>
+    </tr>
+    <tr>
+      <th>SOPClassUID</th>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.4</td>
+    </tr>
+    <tr>
+      <th>SOPInstanceUID</th>
+      <td>1.3.6.1.4.1.2452.6.2743304011.1151359869.12204...</td>
+      <td>1.3.6.1.4.1.2452.6.2774509762.1153355867.34264...</td>
+      <td>1.3.6.1.4.1.2452.6.2633641423.1222660011.25835...</td>
+      <td>1.3.6.1.4.1.2452.6.1019122476.1241727211.17704...</td>
+    </tr>
+    <tr>
+      <th>SeriesInstanceUID</th>
+      <td>1.3.6.1.4.1.2452.6.3396086542.1231529005.38488...</td>
+      <td>1.3.6.1.4.1.2452.6.2747787005.1263068138.27367...</td>
+      <td>1.3.6.1.4.1.2452.6.1938074019.1188018291.41990...</td>
+      <td>1.3.6.1.4.1.2452.6.3150457222.1106452005.39453...</td>
+    </tr>
+    <tr>
+      <th>SeriesNumber</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>SoftwareVersions</th>
+      <td>OTP V4.5.3.30</td>
+      <td>OTP V4.5.2.152</td>
+      <td>OTP V4.5.3.30</td>
+      <td>['24', 'LX', 'MR Software release:HD16.0_V03_1...</td>
+    </tr>
+    <tr>
+      <th>StationName</th>
+      <td>RT-BRACHYT</td>
+      <td>PC009761</td>
+      <td>PC009761</td>
+      <td>NHFEMR04</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Hay una serie de ellos que no nos van a suponer ningún problema. No obstante detengámonos en cada uno de ellos</p>
+<div class="section" id="manufacter-y-manufacturermodelname">
+<h4>Manufacter y ManufacturerModelName<a class="headerlink" href="#manufacter-y-manufacturermodelname" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Podemos poner en ambos el nombre que queramos por ejemplo <strong>IRIMED</strong> y <strong>UtrechtTool</strong></p>
+</div>
+<div class="section" id="modality">
+<h4>Modality<a class="headerlink" href="#modality" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta debe ser obligatoriamente <strong>RTPlan</strong></p>
+</div>
+<div class="section" id="seriesnumber">
+<h4>SeriesNumber<a class="headerlink" href="#seriesnumber" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En esta pondremos <strong>1</strong></p>
+</div>
+<div class="section" id="softwareversion-y-stationname">
+<h4>SoftwareVersion y StationName<a class="headerlink" href="#softwareversion-y-stationname" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>De momento pondremos <strong>1.0</strong> para la primera y <strong>3DSlicer</strong> para la segunda.</p>
+<p>Ahora entramos en los campos no tan evidentes</p>
+</div>
+<div class="section" id="sopclassuid">
+<h4>SOPClassUID<a class="headerlink" href="#sopclassuid" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Por lo que vemos en los diferentes planes, este valor es común. Así que lo mantendremos en nuestro RTPlan fabricado: <strong>1.2.840.10008.5.1.4.1.1.481.5</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="bibliografia.html" title="previous page">Bibliografía</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            Esto es solamente un borrador del proyecto
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
