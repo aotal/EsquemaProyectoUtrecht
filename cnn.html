@@ -114,6 +114,11 @@
      Bibliografía
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anexo1.html">
+     Anexo 1: Creación y exportación Dicom
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -231,6 +236,10 @@
 <div class="section" id="identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador">
 <h1>Identificación del aplicador sobre MRI: Segmentación del aplicador<a class="headerlink" href="#identificacion-del-aplicador-sobre-mri-segmentacion-del-aplicador" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Como ya comentamos en la introducción, no pensamos que podamos obtener directamente las transformaciones afines de las imágenes y es por ello que buscamos una segmentación intermedia del aplicador sobre la MRI.</p>
+<div class="tip admonition">
+<p class="admonition-title">Puntualización</p>
+<p>Existen publicaciones como esta referencia <span id="id1">[<a class="reference internal" href="bibliografia.html#id6"><span>AFO+20</span></a>]</span> que habría que explorar. Parece que existen CNNs que identifican rotaciones en imágenes, pero creo que tienen un esquema similar a las topologías de red típicas.</p>
+</div>
 <div class="section" id="plataformas">
 <h2>Plataformas<a class="headerlink" href="#plataformas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Como recien llegados al mundo del deep learning, no tenemos todavía claro qué librería usar. Por lo que hemos visto las predominantes son <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a> y <a class="reference external" href="https://pytorch.org/">Pytorch</a>. Por otra parte sabemos de la existencia de la plataforma de NVIDIA llamada <a class="reference external" href="https://developer.nvidia.com/clara">Clara</a> que está pensada para uso médico y que puede integrar a las dos anteriores.</p>
@@ -252,15 +261,15 @@
 </div>
 <div class="section" id="candidatas-a-redes">
 <h2>Candidatas a redes<a class="headerlink" href="#candidatas-a-redes" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Revisando los modelos de segmentación mediante redes neuronales convolucionales (CNN), pensamos que las topologías de red adecuadas serían U-net<span id="id1">[<a class="reference internal" href="bibliografia.html#id4"><span>RFB15</span></a>]</span> o su equivalente en 3D V-net<span id="id2">[<a class="reference internal" href="bibliografia.html#id5"><span>MilletariNavabAhmadi16</span></a>]</span></p>
+<p>Revisando los modelos de segmentación mediante redes neuronales convolucionales (CNN), pensamos que las topologías de red adecuadas serían U-net<span id="id2">[<a class="reference internal" href="bibliografia.html#id4"><span>RFB15</span></a>]</span> o su equivalente en 3D V-net<span id="id3">[<a class="reference internal" href="bibliografia.html#id5"><span>MilletariNavabAhmadi16</span></a>]</span></p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id4">
 <img alt="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" src="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/u-net-architecture.png" />
-<p class="caption"><span class="caption-number">Figura 2 </span><span class="caption-text">Esquema de la topología de red U-net</span><a class="headerlink" href="#id3" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 2 </span><span class="caption-text">Esquema de la topología de red U-net</span><a class="headerlink" href="#id4" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 </div>
@@ -268,9 +277,9 @@
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id5">
 <img alt="https://vitalab.github.io/article/images/vnet/vnet.png" src="https://vitalab.github.io/article/images/vnet/vnet.png" />
-<p class="caption"><span class="caption-number">Figura 3 </span><span class="caption-text">V-net. La diferencia frente a U-net es que utiliza kernels de 3x3x3</span><a class="headerlink" href="#id4" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 3 </span><span class="caption-text">V-net. La diferencia frente a U-net es que utiliza kernels de 3x3x3</span><a class="headerlink" href="#id5" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div>
 </div>

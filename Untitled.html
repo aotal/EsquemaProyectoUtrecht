@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&lt;no title&gt; &#8212; Esquema Proyecto Utrecht</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/ovoid.png"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/irimed.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Esquema Proyecto Utrecht</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la página..." aria-label="Buscar en la página..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Planteamiento del problema
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Anotation_nb.html">
+     Herramienta de anotación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnn.html">
+     Identificación del aplicador sobre MRI: Segmentación del aplicador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recon.html">
+     Reconstrucción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bibliografia.html">
+     Bibliografía
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anexo1.html">
+     Anexo 1: Creación y exportación Dicom
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Parte de la línea de investigación del <a href="http://www.uv.es/radiofisica/index.html">IRIMED</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Untitled.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="simple nav section-nav flex-column">
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydicom</span> <span class="k">as</span> <span class="nn">dc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plansimple</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Ficheros/PlanSimple.dcm&#39;</span><span class="p">)</span>
+<span class="n">plancomplejo</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Ficheros/PlanComplejo.dcm&#39;</span><span class="p">)</span>
+<span class="n">plancomplejo2</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Ficheros/PlanComplejo2.dcm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagen</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Ficheros/MR1.3.6.1.4.1.2452.6.1019122476.1241727211.1770477973.3491608041.dcm&#39;</span><span class="p">)</span>
+<span class="n">estructura</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Ficheros/EstructuraSimple.dcm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SOPInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plancomplejo</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SOPInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plancomplejo2</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SOPInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SeriesInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plancomplejo</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SeriesInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">plancomplejo2</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SeriesInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plansimple</span><span class="o">.</span><span class="n">ReferencedStructureSetSequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0008, 1150) Referenced SOP Class UID            UI: RT Structure Set Storage
+(0008, 1155) Referenced SOP Instance UID         UI: 1.3.6.1.4.1.2452.6.2664562426.1288265039.467152794.2028798075
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planlist</span><span class="o">=</span><span class="n">plansimple</span><span class="o">.</span><span class="n">dir</span><span class="p">()</span>
+<span class="n">planlist2</span><span class="o">=</span><span class="n">plancomplejo</span><span class="o">.</span><span class="n">dir</span><span class="p">()</span>
+<span class="n">imagenlist</span><span class="o">=</span><span class="n">imagen</span><span class="o">.</span><span class="n">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">common</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">noncommon</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">planlist</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">imagenlist</span><span class="p">:</span>
+        <span class="n">common</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">noncommon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">noncommon</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ApplicationSetupSequence&#39;,
+ &#39;ApprovalStatus&#39;,
+ &#39;BrachyTreatmentTechnique&#39;,
+ &#39;BrachyTreatmentType&#39;,
+ &#39;FractionGroupSequence&#39;,
+ &#39;InstanceCreationDate&#39;,
+ &#39;InstanceCreationTime&#39;,
+ &#39;InstitutionalDepartmentName&#39;,
+ &#39;OperatorsName&#39;,
+ &#39;RTPlanDate&#39;,
+ &#39;RTPlanGeometry&#39;,
+ &#39;RTPlanLabel&#39;,
+ &#39;RTPlanName&#39;,
+ &#39;RTPlanTime&#39;,
+ &#39;ReferencedStructureSetSequence&#39;,
+ &#39;SourceSequence&#39;,
+ &#39;TimezoneOffsetFromUTC&#39;,
+ &#39;TreatmentMachineSequence&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_markdown_table</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot; Input: Python list with rows of table as lists</span>
+<span class="sd">               First element as header. </span>
+<span class="sd">        Output: String to put into a .md file </span>
+<span class="sd">        </span>
+<span class="sd">    Ex Input: </span>
+<span class="sd">        [[&quot;Name&quot;, &quot;Age&quot;, &quot;Height&quot;],</span>
+<span class="sd">         [&quot;Jake&quot;, 20, 5&#39;10],</span>
+<span class="sd">         [&quot;Mary&quot;, 21, 5&#39;7]] </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">markdown</span><span class="o">=</span><span class="s2">&quot;&lt;ul&gt;&quot;</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">array</span><span class="p">:</span>
+        <span class="n">markdown</span> <span class="o">+=</span> <span class="s1">&#39;&lt;li&gt;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&lt;/li&gt;&#39;</span>
+        <span class="c1">#markdown +=&quot; &lt;br&gt; &quot;</span>
+    <span class="n">markdown</span><span class="o">+=</span><span class="s1">&#39;&lt;/ul&gt;&#39;</span>
+    <span class="k">return</span> <span class="n">markdown</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_markdown_table</span><span class="p">(</span><span class="n">noncommon</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&lt;ul&gt;&lt;li&gt;ApplicationSetupSequence&lt;/li&gt;&lt;li&gt;ApprovalStatus&lt;/li&gt;&lt;li&gt;BrachyTreatmentTechnique&lt;/li&gt;&lt;li&gt;BrachyTreatmentType&lt;/li&gt;&lt;li&gt;FractionGroupSequence&lt;/li&gt;&lt;li&gt;InstanceCreationDate&lt;/li&gt;&lt;li&gt;InstanceCreationTime&lt;/li&gt;&lt;li&gt;InstitutionalDepartmentName&lt;/li&gt;&lt;li&gt;OperatorsName&lt;/li&gt;&lt;li&gt;RTPlanDate&lt;/li&gt;&lt;li&gt;RTPlanGeometry&lt;/li&gt;&lt;li&gt;RTPlanLabel&lt;/li&gt;&lt;li&gt;RTPlanName&lt;/li&gt;&lt;li&gt;RTPlanTime&lt;/li&gt;&lt;li&gt;ReferencedStructureSetSequence&lt;/li&gt;&lt;li&gt;SourceSequence&lt;/li&gt;&lt;li&gt;TimezoneOffsetFromUTC&lt;/li&gt;&lt;li&gt;TreatmentMachineSequence&lt;/li&gt;&lt;/ul&gt;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samevalues</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">differentvalue</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">common</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">==</span><span class="n">imagen</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">samevalues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">differentvalue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samevalues</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AccessionNumber&#39;,
+ &#39;FrameOfReferenceUID&#39;,
+ &#39;PatientBirthDate&#39;,
+ &#39;PatientID&#39;,
+ &#39;PatientName&#39;,
+ &#39;PatientSex&#39;,
+ &#39;PositionReferenceIndicator&#39;,
+ &#39;ReferringPhysicianName&#39;,
+ &#39;SpecificCharacterSet&#39;,
+ &#39;StudyDate&#39;,
+ &#39;StudyDescription&#39;,
+ &#39;StudyID&#39;,
+ &#39;StudyInstanceUID&#39;,
+ &#39;StudyTime&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">differentvalue</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Manufacturer&#39;,
+ &#39;ManufacturerModelName&#39;,
+ &#39;Modality&#39;,
+ &#39;SOPClassUID&#39;,
+ &#39;SOPInstanceUID&#39;,
+ &#39;SeriesInstanceUID&#39;,
+ &#39;SeriesNumber&#39;,
+ &#39;SoftwareVersions&#39;,
+ &#39;StationName&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">x</span><span class="p">,</span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">plancomplejo</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">plancomplejo2</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="n">imagen</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">differentvalue</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;tag&#39;</span><span class="p">,</span><span class="s1">&#39;Plan1&#39;</span><span class="p">,</span><span class="s1">&#39;Plan2&#39;</span><span class="p">,</span><span class="s1">&#39;Plan3&#39;</span><span class="p">,</span><span class="s1">&#39;Imagen&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tag&#39;, &#39;Plan1&#39;, &#39;Plan2&#39;, &#39;Plan3&#39;, &#39;Imagen&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;tag&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Plan1</th>
+      <th>Plan2</th>
+      <th>Plan3</th>
+      <th>Imagen</th>
+    </tr>
+    <tr>
+      <th>tag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Manufacturer</th>
+      <td>Nucletron</td>
+      <td>Nucletron</td>
+      <td>Nucletron</td>
+      <td>GE MEDICAL SYSTEMS</td>
+    </tr>
+    <tr>
+      <th>ManufacturerModelName</th>
+      <td>Oncentra</td>
+      <td>Oncentra</td>
+      <td>Oncentra</td>
+      <td>Signa HDxt</td>
+    </tr>
+    <tr>
+      <th>Modality</th>
+      <td>RTPLAN</td>
+      <td>RTPLAN</td>
+      <td>RTPLAN</td>
+      <td>MR</td>
+    </tr>
+    <tr>
+      <th>SOPClassUID</th>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.481.5</td>
+      <td>1.2.840.10008.5.1.4.1.1.4</td>
+    </tr>
+    <tr>
+      <th>SOPInstanceUID</th>
+      <td>1.3.6.1.4.1.2452.6.2743304011.1151359869.12204...</td>
+      <td>1.3.6.1.4.1.2452.6.2774509762.1153355867.34264...</td>
+      <td>1.3.6.1.4.1.2452.6.2633641423.1222660011.25835...</td>
+      <td>1.3.6.1.4.1.2452.6.1019122476.1241727211.17704...</td>
+    </tr>
+    <tr>
+      <th>SeriesInstanceUID</th>
+      <td>1.3.6.1.4.1.2452.6.3396086542.1231529005.38488...</td>
+      <td>1.3.6.1.4.1.2452.6.2747787005.1263068138.27367...</td>
+      <td>1.3.6.1.4.1.2452.6.1938074019.1188018291.41990...</td>
+      <td>1.3.6.1.4.1.2452.6.3150457222.1106452005.39453...</td>
+    </tr>
+    <tr>
+      <th>SeriesNumber</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>SoftwareVersions</th>
+      <td>OTP V4.5.3.30</td>
+      <td>OTP V4.5.2.152</td>
+      <td>OTP V4.5.3.30</td>
+      <td>[24, LX, MR Software release:HD16.0_V03_1638.a]</td>
+    </tr>
+    <tr>
+      <th>StationName</th>
+      <td>RT-BRACHYT</td>
+      <td>PC009761</td>
+      <td>PC009761</td>
+      <td>NHFEMR04</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;camposnocomunes.csv&#39;</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plan</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;AccessionNumber&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">151300</span><span class="n">bad8af</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plan</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;AccessionNumber&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+<span class="ne">NameError</span>: name &#39;plan&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plan</span><span class="o">.</span><span class="n">AccessionNumber</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagen</span><span class="o">.</span><span class="n">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;InstanceCreationDate&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;20210323&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SOPInstanceUID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.2743304011.1151359869.1220445607.392610815&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;TimezoneOffsetFromUTC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;+0100&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AS</span><span class="o">=</span><span class="n">plansimple</span><span class="o">.</span><span class="n">ApplicationSetupSequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0232) Application Setup Type              CS: &#39;GYNECOLOGY&#39;
+(300a, 0234) Application Setup Number            IS: &quot;0&quot;
+(300a, 0250) Total Reference Air Kerma           DS: &quot;0.0&quot;
+(300a, 0280)  Channel Sequence  3 item(s) ---- 
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;1&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;1&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;1&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;35.2713643012128&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;1&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;0&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;2&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;2&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;2&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;25.7096842210936&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;2&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;1&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+   (3006, 0084) Referenced ROI Number               IS: None
+   (300a, 0110) Number of Control Points            IS: &quot;2&quot;
+   (300a, 0282) Channel Number                      IS: &quot;3&quot;
+   (300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+   (300a, 0286) Channel Total Time                  DS: &quot;0.0&quot;
+   (300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+   (300a, 0290) Source Applicator Number            IS: &quot;3&quot;
+   (300a, 0291) Source Applicator ID                SH: &#39;3&#39;
+   (300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+   (300a, 0294) Source Applicator Name              LO: &#39;&#39;
+   (300a, 0296) Source Applicator Length            DS: &quot;75.921050947076&quot;
+   (300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+   (300a, 02a2) Transfer Tube Number                IS: &quot;3&quot;
+   (300a, 02a4) Transfer Tube Length                DS: None
+   (300a, 02d0)  Brachy Control Point Sequence  2 item(s) ---- 
+      (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+      (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+      (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+      (300a, 02d6) Cumulative Time Weight              DS: None
+      ---------
+   (300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+   (300b, 1000) Private tag data                    IS: &quot;2&quot;
+   (300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+   (300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+   (300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+   (300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+   ---------
+(300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+(300b, 1002) Private tag data                    CS: &#39;TRUE&#39;
+(300b, 1009) Private tag data                    DS: &quot;4.0&quot;
+(300b, 1030) Private tag data                    DS: &quot;0.0&quot;
+(300b, 103b) Private tag data                    DS: &quot;0.0&quot;
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "other-env"
+        },
+        kernelOptions: {
+            kernelName: "other-env",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'other-env'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            Esto es solamente un borrador del proyecto
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
