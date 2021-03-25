@@ -9,6 +9,22 @@ plancomplejo2=dc.read_file('Ficheros/PlanComplejo2.dcm')
 imagen=dc.read_file('Ficheros/MR1.3.6.1.4.1.2452.6.1019122476.1241727211.1770477973.3491608041.dcm')
 estructura=dc.read_file('Ficheros/EstructuraSimple.dcm')
 
+len(plansimple.data_element('SOPInstanceUID').value)
+
+len(plancomplejo.data_element('SOPInstanceUID').value)
+
+len(plancomplejo2.data_element('SOPInstanceUID').value)
+
+len(plansimple.data_element('SeriesInstanceUID').value)
+
+len(plancomplejo.data_element('SeriesInstanceUID').value)
+
+len(plancomplejo2.data_element('SeriesInstanceUID').value)
+
+
+
+
+
 
 
 plansimple.ReferencedStructureSetSequence[0]
@@ -17,10 +33,6 @@ planlist=plansimple.dir()
 planlist2=plancomplejo.dir()
 imagenlist=imagen.dir()
 
-len(common)
-
-len(samevalues)
-
 common=[]
 noncommon=[]
 for x in planlist:
@@ -28,6 +40,8 @@ for x in planlist:
         common.append(x)
     else:
         noncommon.append(x)
+
+noncommon
 
 def make_markdown_table(array):
 
@@ -47,7 +61,7 @@ def make_markdown_table(array):
     markdown+='</ul>'
     return markdown
 
-make_markdown_table(differentvalue)
+make_markdown_table(noncommon)
 
 samevalues=[]
 differentvalue=[]
@@ -76,4 +90,10 @@ plan.AccessionNumber
 
 
 imagen.dir()
+
+plansimple.data_element('InstanceCreationDate').value
+
+plansimple.data_element('SOPInstanceUID').value
+
+plansimple.data_element('TimezoneOffsetFromUTC').value
 

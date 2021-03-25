@@ -1,4 +1,8 @@
 import pandas as pd
+from myst_nb import glue
+
+import uuid
+from datetime import datetime
 
 # Anexo 1: Creación y exportación Dicom
 
@@ -14,9 +18,7 @@ Hay 23 tags comunes entre un fichero de secuencia de imágenes y uno tipo RTPlan
 
 ### Tags de diferente valor
 
-Los 9 que nos quedan son:
-
-<ul><li>Manufacturer</li><li>ManufacturerModelName</li><li>Modality</li><li>SOPClassUID</li><li>SOPInstanceUID</li><li>SeriesInstanceUID</li><li>SeriesNumber</li><li>SoftwareVersions</li><li>StationName</li></ul>
+Los 9 que nos quedan se muestran en la tabla siguiente con valores ejemplo de tres planes diferentes y de un archivo de imagen:
 
 campos=pd.read_csv('data/camposnocomunes.csv')
 campos.set_index('tag')
@@ -43,5 +45,59 @@ Ahora entramos en los campos no tan evidentes
 
 #### SOPClassUID
 
-Por lo que vemos en los diferentes planes, este valor es común. Así que lo mantendremos en nuestro RTPlan fabricado: **1.2.840.10008.5.1.4.1.1.481.5**
+Por lo que vemos en los diferentes planes, este valor es común. EL valor **1.2.840.10008.5.1.4.1.1.481.5** corresponde a un _Radiation Therapy Plan Storage_.
 
+#### SOPInstanceUID y SeriesInstanceUID
+
+En el caso de estos dos valores las cosas no están tan claras. Parece que poseeen el mismo prefijo que sus equivalentes en el fichero de imagen. La segunda parte corresponde a un número aleatorio de entre 39 y 40 cifras separado en grupos de 10 por puntos. Así pues los generamos con el siguiente código:
+
+prefix='1.3.6.1.4.1.2452.6.'
+def UIDgenerator(prefix):
+    while True:
+        uid=str(uuid.uuid4().int)
+        if (len(uid)>=39):
+             return prefix+uid[0:10]+'.'+uid[10:20]+'.'+uid[20:30]+'.'+uid[30:]
+UIDgenerator(prefix)
+
+## Tags no comunes
+
+### Tags no sequence
+
+<ul><li>ApprovalStatus</li><li>BrachyTreatmentTechnique</li><li>BrachyTreatmentType</li><li>InstanceCreationDate</li><li>InstanceCreationTime</li><li>InstitutionalDepartmentName</li><li>OperatorsName</li><li>RTPlanDate</li><li>RTPlanGeometry</li><li>RTPlanLabel</li><li>RTPlanName</li><li>RTPlanTime</li><li>TimezoneOffsetFromUTC</li></ul>
+
+#### ApprovalStatus
+
+El valor será **UNAPPROVED**
+
+#### BrachyTreatmentTechnique
+
+Pondremos valor **INTERSTITIAL**
+
+#### BrachyTreatmentType
+El valor es **HDR**
+
+#### InstanceCreationDate y InstanceCreationTime
+Fecha del día de la creación del plan en formato AAAAMMDD y la hora HHMMSS
+
+Hoy=datetime.today()
+print(Hoy.strftime("%Y%m%d"),Hoy.strftime("%H%M%S"))
+
+#### OperatorsName
+
+Cuanquiera. **Plan** por ejemplo.
+
+#### RTPlanDate
+
+La misma que **InstanceCreationTime**
+
+#### RTPlanGeometry
+El valor es **PATIENT**
+
+#### RTPlanLabel y RTPlanName
+Por ejemplo **IRIMED** en ambos
+
+#### RTPlanTime
+El mismo valor que InstanceCreationTime
+
+#### TimezoneOffsetFromUTC
+Habrá que verificar el horario en ese momento. No creemos que sea importante ya que no influye en la reconstrucción

@@ -232,6 +232,75 @@
        SOPClassUID
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sopinstanceuid-y-seriesinstanceuid">
+       SOPInstanceUID y SeriesInstanceUID
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tags-no-comunes">
+   Tags no comunes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tags-no-sequence">
+     Tags no sequence
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#approvalstatus">
+       ApprovalStatus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#brachytreatmenttechnique">
+       BrachyTreatmentTechnique
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#brachytreatmenttype">
+       BrachyTreatmentType
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instancecreationdate-y-instancecreationtime">
+       InstanceCreationDate y InstanceCreationTime
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operatorsname">
+       OperatorsName
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rtplandate">
+       RTPlanDate
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rtplangeometry">
+       RTPlanGeometry
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rtplanlabel-y-rtplanname">
+       RTPlanLabel y RTPlanName
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rtplantime">
+       RTPlanTime
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#timezoneoffsetfromutc">
+       TimezoneOffsetFromUTC
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -250,6 +319,14 @@
                 
   <div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="anexo-1-creacion-y-exportacion-dicom">
 <h1>Anexo 1: Creación y exportación Dicom<a class="headerlink" href="#anexo-1-creacion-y-exportacion-dicom" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="introduccion">
@@ -261,8 +338,8 @@
 <p>Hay 23 tags comunes entre un fichero de secuencia de imágenes y uno tipo RTPlan. De ellos, 14 poseen el mismo valor y por lo tanto el mismo viene definido de la MRI. La lista es:</p>
 <ul><li>AccessionNumber</li><li>FrameOfReferenceUID</li><li>PatientBirthDate</li><li>PatientID</li><li>PatientName</li><li>PatientSex</li><li>PositionReferenceIndicator</li><li>ReferringPhysicianName</li><li>SpecificCharacterSet</li><li>StudyDate</li><li>StudyDescription</li><li>StudyID</li><li>StudyInstanceUID</li><li>StudyTime</li></ul><div class="section" id="tags-de-diferente-valor">
 <h3>Tags de diferente valor<a class="headerlink" href="#tags-de-diferente-valor" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Los 9 que nos quedan son:</p>
-<ul><li>Manufacturer</li><li>ManufacturerModelName</li><li>Modality</li><li>SOPClassUID</li><li>SOPInstanceUID</li><li>SeriesInstanceUID</li><li>SeriesNumber</li><li>SoftwareVersions</li><li>StationName</li></ul><div class="cell tag_remove-input docutils container">
+<p>Los 9 que nos quedan se muestran en la tabla siguiente con valores ejemplo de tres planes diferentes y de un archivo de imagen:</p>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -383,7 +460,88 @@
 </div>
 <div class="section" id="sopclassuid">
 <h4>SOPClassUID<a class="headerlink" href="#sopclassuid" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Por lo que vemos en los diferentes planes, este valor es común. Así que lo mantendremos en nuestro RTPlan fabricado: <strong>1.2.840.10008.5.1.4.1.1.481.5</strong></p>
+<p>Por lo que vemos en los diferentes planes, este valor es común. EL valor <strong>1.2.840.10008.5.1.4.1.1.481.5</strong> corresponde a un <em>Radiation Therapy Plan Storage</em>.</p>
+</div>
+<div class="section" id="sopinstanceuid-y-seriesinstanceuid">
+<h4>SOPInstanceUID y SeriesInstanceUID<a class="headerlink" href="#sopinstanceuid-y-seriesinstanceuid" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En el caso de estos dos valores las cosas no están tan claras. Parece que poseeen el mismo prefijo que sus equivalentes en el fichero de imagen. La segunda parte corresponde a un número aleatorio de entre 39 y 40 cifras separado en grupos de 10 por puntos. Así pues los generamos con el siguiente código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;1.3.6.1.4.1.2452.6.&#39;</span>
+<span class="k">def</span> <span class="nf">UIDgenerator</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">uid</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">39</span><span class="p">):</span>
+             <span class="k">return</span> <span class="n">prefix</span><span class="o">+</span><span class="n">uid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">uid</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">uid</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">uid</span><span class="p">[</span><span class="mi">30</span><span class="p">:]</span>
+<span class="n">UIDgenerator</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.1006409150.4538441387.0283226552.731930019&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tags-no-comunes">
+<h2>Tags no comunes<a class="headerlink" href="#tags-no-comunes" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="tags-no-sequence">
+<h3>Tags no sequence<a class="headerlink" href="#tags-no-sequence" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul><li>ApprovalStatus</li><li>BrachyTreatmentTechnique</li><li>BrachyTreatmentType</li><li>InstanceCreationDate</li><li>InstanceCreationTime</li><li>InstitutionalDepartmentName</li><li>OperatorsName</li><li>RTPlanDate</li><li>RTPlanGeometry</li><li>RTPlanLabel</li><li>RTPlanName</li><li>RTPlanTime</li><li>TimezoneOffsetFromUTC</li></ul><div class="section" id="approvalstatus">
+<h4>ApprovalStatus<a class="headerlink" href="#approvalstatus" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El valor será <strong>UNAPPROVED</strong></p>
+</div>
+<div class="section" id="brachytreatmenttechnique">
+<h4>BrachyTreatmentTechnique<a class="headerlink" href="#brachytreatmenttechnique" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Pondremos valor <strong>INTERSTITIAL</strong></p>
+</div>
+<div class="section" id="brachytreatmenttype">
+<h4>BrachyTreatmentType<a class="headerlink" href="#brachytreatmenttype" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El valor es <strong>HDR</strong></p>
+</div>
+<div class="section" id="instancecreationdate-y-instancecreationtime">
+<h4>InstanceCreationDate y InstanceCreationTime<a class="headerlink" href="#instancecreationdate-y-instancecreationtime" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Fecha del día de la creación del plan en formato AAAAMMDD y la hora HHMMSS</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Hoy</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Hoy</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">),</span><span class="n">Hoy</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H%M%S&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210325 152542
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operatorsname">
+<h4>OperatorsName<a class="headerlink" href="#operatorsname" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Cuanquiera. <strong>Plan</strong> por ejemplo.</p>
+</div>
+<div class="section" id="rtplandate">
+<h4>RTPlanDate<a class="headerlink" href="#rtplandate" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>La misma que <strong>InstanceCreationTime</strong></p>
+</div>
+<div class="section" id="rtplangeometry">
+<h4>RTPlanGeometry<a class="headerlink" href="#rtplangeometry" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El valor es <strong>PATIENT</strong></p>
+</div>
+<div class="section" id="rtplanlabel-y-rtplanname">
+<h4>RTPlanLabel y RTPlanName<a class="headerlink" href="#rtplanlabel-y-rtplanname" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Por ejemplo <strong>IRIMED</strong> en ambos</p>
+</div>
+<div class="section" id="rtplantime">
+<h4>RTPlanTime<a class="headerlink" href="#rtplantime" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El mismo valor que InstanceCreationTime</p>
+</div>
+<div class="section" id="timezoneoffsetfromutc">
+<h4>TimezoneOffsetFromUTC<a class="headerlink" href="#timezoneoffsetfromutc" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Habrá que verificar el horario en ese momento. No creemos que sea importante ya que no influye en la reconstrucción</p>
 </div>
 </div>
 </div>
@@ -398,16 +556,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "book"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "book",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'book'</script>
 
               </div>
               
