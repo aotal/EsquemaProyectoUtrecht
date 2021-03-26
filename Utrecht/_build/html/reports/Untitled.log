@@ -1,30 +1,44 @@
 Traceback (most recent call last):
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\jupyter_cache\executors\utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\client.py", line 1112, in execute
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1107, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\util.py", line 74, in wrapped
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\util.py", line 53, in just_run
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
     return loop.run_until_complete(coro)
-  File "c:\users\25166122m\miniconda3\envs\book\lib\asyncio\base_events.py", line 587, in run_until_complete
+  File "/home/aotal/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\client.py", line 554, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\client.py", line 857, in async_execute_cell
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 852, in async_execute_cell
     self._check_raise_for_error(cell, exec_reply)
-  File "c:\users\25166122m\miniconda3\envs\book\lib\site-packages\nbclient\client.py", line 760, in _check_raise_for_error
+  File "/home/aotal/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-plan.data_element('AccessionNumber').value
+datetime.strptime('2020-03-22', '%y-%m-%d')
 ------------------
 
-[1;31m---------------------------------------------------------------------------[0m
-[1;31mNameError[0m                                 Traceback (most recent call last)
-[1;32m<ipython-input-24-151300bad8af>[0m in [0;36m<module>[1;34m[0m
-[1;32m----> 1[1;33m [0mplan[0m[1;33m.[0m[0mdata_element[0m[1;33m([0m[1;34m'AccessionNumber'[0m[1;33m)[0m[1;33m.[0m[0mvalue[0m[1;33m[0m[1;33m[0m[0m
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m<ipython-input-11-56486ead84ac>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdatetime[0m[0;34m.[0m[0mstrptime[0m[0;34m([0m[0;34m'2020-03-22'[0m[0;34m,[0m [0;34m'%y-%m-%d'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[1;31mNameError[0m: name 'plan' is not defined
-NameError: name 'plan' is not defined
+[0;32m~/anaconda3/envs/book/lib/python3.9/_strptime.py[0m in [0;36m_strptime_datetime[0;34m(cls, data_string, format)[0m
+[1;32m    566[0m     """Return a class cls instance based on the input string and the
+[1;32m    567[0m     format string."""
+[0;32m--> 568[0;31m     [0mtt[0m[0;34m,[0m [0mfraction[0m[0;34m,[0m [0mgmtoff_fraction[0m [0;34m=[0m [0m_strptime[0m[0;34m([0m[0mdata_string[0m[0;34m,[0m [0mformat[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    569[0m     [0mtzname[0m[0;34m,[0m [0mgmtoff[0m [0;34m=[0m [0mtt[0m[0;34m[[0m[0;34m-[0m[0;36m2[0m[0;34m:[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    570[0m     [0margs[0m [0;34m=[0m [0mtt[0m[0;34m[[0m[0;34m:[0m[0;36m6[0m[0;34m][0m [0;34m+[0m [0;34m([0m[0mfraction[0m[0;34m,[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/book/lib/python3.9/_strptime.py[0m in [0;36m_strptime[0;34m(data_string, format)[0m
+[1;32m    347[0m     [0mfound[0m [0;34m=[0m [0mformat_regex[0m[0;34m.[0m[0mmatch[0m[0;34m([0m[0mdata_string[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    348[0m     [0;32mif[0m [0;32mnot[0m [0mfound[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 349[0;31m         raise ValueError("time data %r does not match format %r" %
+[0m[1;32m    350[0m                          (data_string, format))
+[1;32m    351[0m     [0;32mif[0m [0mlen[0m[0;34m([0m[0mdata_string[0m[0;34m)[0m [0;34m!=[0m [0mfound[0m[0;34m.[0m[0mend[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mValueError[0m: time data '2020-03-22' does not match format '%y-%m-%d'
+ValueError: time data '2020-03-22' does not match format '%y-%m-%d'
 

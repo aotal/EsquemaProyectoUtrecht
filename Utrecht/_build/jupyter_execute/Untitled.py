@@ -1,6 +1,8 @@
 import pydicom as dc
 
 import pandas as pd
+from datetime import datetime
+import numpy as np
 
 plansimple=dc.read_file('Ficheros/PlanSimple.dcm')
 plancomplejo=dc.read_file('Ficheros/PlanComplejo.dcm')
@@ -21,11 +23,15 @@ len(plancomplejo.data_element('SeriesInstanceUID').value)
 
 len(plancomplejo2.data_element('SeriesInstanceUID').value)
 
+datetime.strptime('2020-03-22', '%y-%m-%d')
 
+datetime.strptime()
 
+datetimeobject = datetime.strptime('20200302120000','%Y%m%d%H%M%S')
 
+datetimeobject
 
-
+%H%M%S
 
 plansimple.ReferencedStructureSetSequence[0]
 
@@ -97,7 +103,51 @@ plansimple.data_element('SOPInstanceUID').value
 
 print(plansimple.data_element('FractionGroupSequence').value[0])
 
-AS=plansimple.ReferencedStructureSetSequence[0]
+plancomplejo2.RTPlanDate
 
-AS.ReferencedSOPInstanceUID
+plancomplejo2.RTPlanTime
+
+plancomplejo2.SourceSequence[0].SourceStrengthReferenceDate
+
+plancomplejo2.SourceSequence[0].SourceStrengthReferenceTime
+
+datetimeobject = datetime.strptime('20200302120000','%Y%m%d%H%M%S')
+
+fecha=lambda x,y:datetime.strptime(x+y,'%Y%m%d%H%M%S')
+
+fechacal=fecha(plancomplejo2.SourceSequence[0].SourceStrengthReferenceDate,plancomplejo2.SourceSequence[0].SourceStrengthReferenceTime)
+fechatrat=fecha(plancomplejo2.RTPlanDate,plancomplejo2.RTPlanTime)
+
+delta=fechatrat-fechacal
+
+plancomplejo2.data_element('SourceSequence').value[0].ReferenceAirKermaRate
+
+Secuencia.TotalReferenceAirKerma
+
+np.exp(-np.log(2)*delta.seconds/3600/24/73.81)*5009
+
+AS=plancomplejo2.ReferencedStructureSetSequence
+
+#Secuencia=plancomplejo2.data_element('ApplicationSetupSequence').value[0].ChannelSequence
+Secuencia=plancomplejo2.data_element('ApplicationSetupSequence').value[0]
+
+X=Secuencia.ChannelSequence[0].ChannelTotalTime+Secuencia.ChannelSequence[1].ChannelTotalTime+Secuencia.ChannelSequence[2].ChannelTotalTime
+
+plancomplejo2.data_element('SourceSequence').value[0].ReferenceAirKermaRate/3600*X
+
+plancomplejo2.data_element('ApplicationSetupSequence').value[0]
+
+Secuencia.TotalReferenceAirKerma
+
+Secuencia[0].FinalCumulativeTimeWeight+Secuencia[1].FinalCumulativeTimeWeight+Secuencia[2].FinalCumulativeTimeWeight
+
+X=Secuencia[0].ChannelTotalTime+Secuencia[2].ChannelTotalTime+Secuencia[2].ChannelTotalTime
+
+X/3600
+
+26306.824376534/X
+
+Secuencia[0]
+
+plancomplejo2
 

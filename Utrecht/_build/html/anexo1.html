@@ -4,7 +4,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anexo 1: Creación y exportación Dicom &#8212; Esquema Proyecto Utrecht</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -40,12 +40,13 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -138,21 +139,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
             class="fas fa-download"></i></button>
@@ -170,25 +171,24 @@
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
+        <!-- Source interaction buttons -->
 
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-                    title="Modo de pantalla completa"><i
-                        class="fas fa-expand"></i></button></a>
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+        <!-- Launch buttons -->
 
-        </div>
+    </div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contenido
+            <i class="fas fa-list"></i> Contenido
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -307,6 +307,28 @@
     <a class="reference internal nav-link" href="#tags-sequence">
      Tags sequence
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fractiongroupsequence">
+       FractionGroupSequence
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#referencedstructuresetsequence">
+       ReferencedStructureSetSequence
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sourcesequence">
+       SourceSequence
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#applicationsetupsequence">
+       ApplicationSetupSequence
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -314,7 +336,6 @@
 
         </nav>
         
-        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -486,7 +507,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.1589809267.7625695935.2761090776.877602956&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.1374933064.7355973003.2591592166.066917952&#39;
 </pre></div>
 </div>
 </div>
@@ -521,7 +542,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210326 094243
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210326 221432
 </pre></div>
 </div>
 </div>
@@ -589,7 +610,11 @@
 <div class="section" id="tags-sequence">
 <h3>Tags sequence<a class="headerlink" href="#tags-sequence" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La lista de tags de secuencia son los siguientes</p>
-<ul><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li><li>ApplicationSetupSequence</li></ul><div class="cell tag_remove-input docutils container">
+<ul><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li><li>ApplicationSetupSequence</li></ul><p>Salvo que se diga lo contrario siempre nos referiremos a la posición 0 de la secuencia</p>
+<div class="section" id="fractiongroupsequence">
+<h4>FractionGroupSequence<a class="headerlink" href="#fractiongroupsequence" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Dejaremos el siguiente tag por defecto</p>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0071) Fraction Group Number               IS: &quot;1&quot;
 (300a, 0078) Number of Fractions Planned         IS: &quot;1&quot;
@@ -601,6 +626,200 @@
 </pre></div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="referencedstructuresetsequence">
+<h4>ReferencedStructureSetSequence<a class="headerlink" href="#referencedstructuresetsequence" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>El aspecto del tag es el siguiente:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0008, 1150) Referenced SOP Class UID            UI: RT Structure Set Storage
+(0008, 1155) Referenced SOP Instance UID         UI: 1.3.6.1.4.1.2452.6.2664562426.1288265039.467152794.2028798075
+</pre></div>
+</div>
+</div>
+</div>
+<p>Simplemente debemos localizar en el fichero de estructuras los campos SOPClassUID y SOPInstanceUID e incorporar esos valores a los sub tags.</p>
+</div>
+<div class="section" id="sourcesequence">
+<h4>SourceSequence<a class="headerlink" href="#sourcesequence" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Esta secuencia tiene el siguiente aspecto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">plansimple</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SourceSequence&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0212) Source Number                       IS: &quot;0&quot;
+(300a, 0214) Source Type                         CS: &#39;LINE&#39;
+(300a, 0226) Source Isotope Name                 LO: &#39;Ir-192&#39;
+(300a, 0228) Source Isotope Half Life            DS: &quot;73.81&quot;
+(300a, 0229) Source Strength Units               CS: &#39;AIR_KERMA_RATE&#39;
+(300a, 022a) Reference Air Kerma Rate            DS: &quot;21733.8274231908&quot;
+(300a, 022c) Source Strength Reference Date      DA: &#39;20210323&#39;
+(300a, 022e) Source Strength Reference Time      TM: &#39;090355&#39;
+(300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+(300b, 1006) Private tag data                    DS: &quot;-100663.0&quot;
+(300b, 1007) Private tag data                    DS: &quot;-100693.0&quot;
+(300b, 1008) Private tag data                    DT: &#39;20201229143800&#39;
+(300b, 100c) Private tag data                    DS: None
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ignoraremos los private tag data. Para los campos <strong>ReferenceAirKermaRate</strong>,<strong>SourceStrength ReferenceDate</strong> y <strong>SourceStrengthReferenceTime</strong> tenemos dos opciones: O ponemos valores genéricos de fuente, lo más cómodo, o ponemos los valores de la funete que vayamos a utilizar. Lo demás se puede dejar como en el ejemplo</p>
+</div>
+<div class="section" id="applicationsetupsequence">
+<h4>ApplicationSetupSequence<a class="headerlink" href="#applicationsetupsequence" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En el ejemplo siguiente los dos primeros tags pueden quedar tal cual.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">300</span><span class="n">a</span><span class="p">,</span> <span class="mi">0232</span><span class="p">)</span> <span class="n">Application</span> <span class="n">Setup</span> <span class="n">Type</span>              <span class="n">CS</span><span class="p">:</span> <span class="s1">&#39;GYNECOLOGY&#39;</span>
+<span class="p">(</span><span class="mi">300</span><span class="n">a</span><span class="p">,</span> <span class="mi">0234</span><span class="p">)</span> <span class="n">Application</span> <span class="n">Setup</span> <span class="n">Number</span>            <span class="n">IS</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+<span class="p">(</span><span class="mi">300</span><span class="n">a</span><span class="p">,</span> <span class="mi">0250</span><span class="p">)</span> <span class="n">Total</span> <span class="n">Reference</span> <span class="n">Air</span> <span class="n">Kerma</span>           <span class="n">DS</span><span class="p">:</span> <span class="s2">&quot;3315.31795903434&quot;</span>
+</pre></div>
+</div>
+<p>El tercero lo podemos calcular como el cociente entre el campo <strong>ReferenceAirKermaRate</strong> y el tiempo total de radiación expresado en horas que será la suma de los tiempos totales de cada fuente, en nuestro caso 1, y de cada uno de los canales.</p>
+<p>Para el ejemplo que nos ocupa el plan se llama plancomplejo2 y los valores que buscamos son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ReferenceAirKermaRate</span><span class="o">=</span><span class="n">plancomplejo2</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;SourceSequence&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ReferenceAirKermaRate</span>
+<span class="n">Secuencia</span><span class="o">=</span><span class="n">plancomplejo2</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s1">&#39;ApplicationSetupSequence&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">TiempoTotal</span><span class="o">=</span><span class="p">(</span><span class="n">Secuencia</span><span class="o">.</span><span class="n">ChannelSequence</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ChannelTotalTime</span><span class="o">+</span><span class="n">Secuencia</span><span class="o">.</span><span class="n">ChannelSequence</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ChannelTotalTime</span><span class="o">+</span><span class="n">Secuencia</span><span class="o">.</span><span class="n">ChannelSequence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">ChannelTotalTime</span><span class="p">)</span><span class="o">/</span><span class="mi">3600</span>
+<span class="n">TotalReferenceAirKerma</span><span class="o">=</span><span class="n">ReferenceAirKermaRate</span><span class="o">*</span><span class="n">TiempoTotal</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TotalReferenceAirKerma</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3315.317959034321
+</pre></div>
+</div>
+</div>
+</div>
+<p>Que como vemos coincide con lo que había en la cabecera. Con respecto al tiempo total, podemos elegir el tiempo que queramos por posición. Este cálculo lo hacemos para que simplemente sea consistente el fichero.
+Por otra parte veamos ahora el aspecto de cada uno de los ChannelSequence</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3006, 0084) Referenced ROI Number               IS: None
+(300a, 0110) Number of Control Points            IS: &quot;14&quot;
+(300a, 0282) Channel Number                      IS: &quot;1&quot;
+(300a, 0284) Channel Length                      DS: &quot;1500.0&quot;
+(300a, 0286) Channel Total Time                  DS: &quot;82.6262964446422&quot;
+(300a, 0288) Source Movement Type                CS: &#39;STEPWISE&#39;
+(300a, 0290) Source Applicator Number            IS: &quot;1&quot;
+(300a, 0291) Source Applicator ID                SH: &#39;1&#39;
+(300a, 0292) Source Applicator Type              CS: &#39;FLEXIBLE&#39;
+(300a, 0294) Source Applicator Name              LO: &#39;&#39;
+(300a, 0296) Source Applicator Length            DS: &quot;37.0503443100255&quot;
+(300a, 02a0) Source Applicator Step Size         DS: &quot;2.5&quot;
+(300a, 02a2) Transfer Tube Number                IS: &quot;1&quot;
+(300a, 02a4) Transfer Tube Length                DS: None
+(300a, 02c8) Final Cumulative Time Weight        DS: &quot;6.33436977863312&quot;
+(300a, 02d0)  Brachy Control Point Sequence  14 item(s) ---- 
+   (300a, 0112) Control Point Index                 IS: &quot;0&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.010310, 4.792519, 9.751305]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;0.0&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;1&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;0.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.010310, 4.792519, 9.751305]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;0.57552659511566&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;2&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;2.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.178212, 2.907082, 8.118230]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;0.57552659511566&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;3&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;2.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.178212, 2.907082, 8.118230]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;1.61264073848724&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;4&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;5.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.345899, 1.034678, 6.470917]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;1.61264073848724&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;5&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;5.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.345899, 1.034678, 6.470917]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;2.60867154598236&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;6&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;7.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.512237, -0.755723, 4.734024]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;2.60867154598236&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;7&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;7.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.512237, -0.755723, 4.734024]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;3.57875949144363&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;8&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;10.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.674082, -2.433228, 2.889942]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;3.57875949144363&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;9&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;10.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.674082, -2.433228, 2.889942]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;4.52699571847916&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;10&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;12.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.784139, -3.891006, 0.885583]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;4.52699571847916&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;11&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;12.5&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.784139, -3.891006, 0.885583]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;5.44629615545273&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;12&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;15.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.834048, -4.986355, -1.359250]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;5.44629615545273&quot;
+   ---------
+   (300a, 0112) Control Point Index                 IS: &quot;13&quot;
+   (300a, 02d2) Control Point Relative Position     DS: &quot;15.0&quot;
+   (300a, 02d4) Control Point 3D Position           DS: [-24.834048, -4.986355, -1.359250]
+   (300a, 02d6) Cumulative Time Weight              DS: &quot;6.33436977863312&quot;
+   ---------
+(300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+(300b, 1000) Private tag data                    IS: &quot;0&quot;
+(300b, 100e) Private tag data                    DS: &quot;1.0&quot;
+(300b, 1013) Private tag data                    LO: &#39;NO_MODEL_ID&#39;
+(300b, 1027) Private tag data                    DS: &quot;6.0&quot;
+(300b, 1032) Private tag data                    DS: &quot;0.0&quot;
+(300c, 000e) Referenced Source Number            IS: &quot;0&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El <strong>SourceApplicatorLength</strong> lo podemos obtener a posteriori midiendo la distancia entre cada uno de los puntos de parada. Al <strong>FinalCumulativeTimeWeight</strong> le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al <strong>BrachyControlPointSequence</strong>.
+Siempre tendrá un número par de elementos, veamos un ejemplo:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0112) Control Point Index                 IS: &quot;6&quot;
+(300a, 02d2) Control Point Relative Position     DS: &quot;7.5&quot;
+(300a, 02d4) Control Point 3D Position           DS: [-24.512237, -0.755723, 4.734024]
+(300a, 02d6) Cumulative Time Weight              DS: &quot;2.60867154598236&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(300a, 0112) Control Point Index                 IS: &quot;7&quot;
+(300a, 02d2) Control Point Relative Position     DS: &quot;7.5&quot;
+(300a, 02d4) Control Point 3D Position           DS: [-24.512237, -0.755723, 4.734024]
+(300a, 02d6) Cumulative Time Weight              DS: &quot;3.57875949144363&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los elementos van numerados de manera correlativa por un índice. La posición relativa es un múltiplo del paso de fuente, en este caso 2.5. El <strong>ControlPoint3DPosition</strong> nos vendrá del programa de reconstrucción descrito en el capítulo sobre <a class="reference internal" href="Anotation_nb.html#capitulo-anotation"><span class="std std-ref">anotación</span></a>. El <strong>CumulativeTimeWeight</strong> al igual que el tiempo lo definiremos consistente con lo que elijamos para cada canal</p>
 </div>
 </div>
 </div>
@@ -615,27 +834,27 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "book"
+            mode: "other-env"
         },
         kernelOptions: {
-            kernelName: "book",
+            kernelName: "other-env",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'book'</script>
+    <script>kernelName = 'other-env'</script>
 
               </div>
               
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
         
-        <div class='prev-next-bottom'>
-            
     <a class='left-prev' id="prev-link" href="bibliografia.html" title="previous page">Bibliografía</a>
 
-        </div>
-        
-        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">

@@ -8,6 +8,7 @@ import pytz
 
 estructura=dc.read_file('Ficheros/EstructuraSimple.dcm')
 plansimple=dc.read_file('Ficheros/PlanSimple.dcm')
+plancomplejo2=dc.read_file('Ficheros/PlanComplejo2.dcm')
 
 # Anexo 1: Creación y exportación Dicom
 
@@ -122,4 +123,56 @@ La lista de tags de secuencia son los siguientes
 
 <ul><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li><li>ApplicationSetupSequence</li></ul>
 
+Salvo que se diga lo contrario siempre nos referiremos a la posición 0 de la secuencia
+
+#### FractionGroupSequence
+Dejaremos el siguiente tag por defecto
+
 print(plansimple.data_element('FractionGroupSequence').value[0])
+
+#### ReferencedStructureSetSequence
+El aspecto del tag es el siguiente:
+
+print(plansimple.data_element('ReferencedStructureSetSequence').value[0])
+
+Simplemente debemos localizar en el fichero de estructuras los campos SOPClassUID y SOPInstanceUID e incorporar esos valores a los sub tags. 
+
+#### SourceSequence
+Esta secuencia tiene el siguiente aspecto:
+
+print(plansimple.data_element('SourceSequence').value[0])
+
+Ignoraremos los private tag data. Para los campos **ReferenceAirKermaRate**,**SourceStrength ReferenceDate** y **SourceStrengthReferenceTime** tenemos dos opciones: O ponemos valores genéricos de fuente, lo más cómodo, o ponemos los valores de la funete que vayamos a utilizar. Lo demás se puede dejar como en el ejemplo 
+
+#### ApplicationSetupSequence
+En el ejemplo siguiente los dos primeros tags pueden quedar tal cual.
+
+```
+(300a, 0232) Application Setup Type              CS: 'GYNECOLOGY'
+(300a, 0234) Application Setup Number            IS: "0"
+(300a, 0250) Total Reference Air Kerma           DS: "3315.31795903434"
+```
+
+El tercero lo podemos calcular como el cociente entre el campo **ReferenceAirKermaRate** y el tiempo total de radiación expresado en horas que será la suma de los tiempos totales de cada fuente, en nuestro caso 1, y de cada uno de los canales.
+
+Para el ejemplo que nos ocupa el plan se llama plancomplejo2 y los valores que buscamos son:
+
+ReferenceAirKermaRate=plancomplejo2.data_element('SourceSequence').value[0].ReferenceAirKermaRate
+Secuencia=plancomplejo2.data_element('ApplicationSetupSequence').value[0]
+TiempoTotal=(Secuencia.ChannelSequence[0].ChannelTotalTime+Secuencia.ChannelSequence[1].ChannelTotalTime+Secuencia.ChannelSequence[2].ChannelTotalTime)/3600
+TotalReferenceAirKerma=ReferenceAirKermaRate*TiempoTotal
+print(TotalReferenceAirKerma)
+
+Que como vemos coincide con lo que había en la cabecera. Con respecto al tiempo total, podemos elegir el tiempo que queramos por posición. Este cálculo lo hacemos para que simplemente sea consistente el fichero.
+Por otra parte veamos ahora el aspecto de cada uno de los ChannelSequence
+
+Secuencia.ChannelSequence[0]
+
+Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El **SourceApplicatorLength** lo podemos obtener a posteriori midiendo la distancia entre cada uno de los puntos de parada. Al **FinalCumulativeTimeWeight** le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al **BrachyControlPointSequence**.
+Siempre tendrá un número par de elementos, veamos un ejemplo:
+
+Secuencia.ChannelSequence[0].BrachyControlPointSequence[6]
+
+Secuencia.ChannelSequence[0].BrachyControlPointSequence[7]
+
+Los elementos van numerados de manera correlativa por un índice. La posición relativa es un múltiplo del paso de fuente, en este caso 2.5. El **ControlPoint3DPosition** nos vendrá del programa de reconstrucción descrito en el capítulo sobre [anotación](capitulo:anotation). El **CumulativeTimeWeight** al igual que el tiempo lo definiremos consistente con lo que elijamos para cada canal
