@@ -17,14 +17,28 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-plan.data_element('AccessionNumber').value
+datetime.strptime('2020-03-22', '%y-%m-%d')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-24-151300bad8af>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mplan[0m[0;34m.[0m[0mdata_element[0m[0;34m([0m[0;34m'AccessionNumber'[0m[0;34m)[0m[0;34m.[0m[0mvalue[0m[0;34m[0m[0;34m[0m[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m<ipython-input-11-56486ead84ac>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdatetime[0m[0;34m.[0m[0mstrptime[0m[0;34m([0m[0;34m'2020-03-22'[0m[0;34m,[0m [0;34m'%y-%m-%d'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'plan' is not defined
-NameError: name 'plan' is not defined
+[0;32m~/anaconda3/envs/book/lib/python3.9/_strptime.py[0m in [0;36m_strptime_datetime[0;34m(cls, data_string, format)[0m
+[1;32m    566[0m     """Return a class cls instance based on the input string and the
+[1;32m    567[0m     format string."""
+[0;32m--> 568[0;31m     [0mtt[0m[0;34m,[0m [0mfraction[0m[0;34m,[0m [0mgmtoff_fraction[0m [0;34m=[0m [0m_strptime[0m[0;34m([0m[0mdata_string[0m[0;34m,[0m [0mformat[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    569[0m     [0mtzname[0m[0;34m,[0m [0mgmtoff[0m [0;34m=[0m [0mtt[0m[0;34m[[0m[0;34m-[0m[0;36m2[0m[0;34m:[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    570[0m     [0margs[0m [0;34m=[0m [0mtt[0m[0;34m[[0m[0;34m:[0m[0;36m6[0m[0;34m][0m [0;34m+[0m [0;34m([0m[0mfraction[0m[0;34m,[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/book/lib/python3.9/_strptime.py[0m in [0;36m_strptime[0;34m(data_string, format)[0m
+[1;32m    347[0m     [0mfound[0m [0;34m=[0m [0mformat_regex[0m[0;34m.[0m[0mmatch[0m[0;34m([0m[0mdata_string[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    348[0m     [0;32mif[0m [0;32mnot[0m [0mfound[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 349[0;31m         raise ValueError("time data %r does not match format %r" %
+[0m[1;32m    350[0m                          (data_string, format))
+[1;32m    351[0m     [0;32mif[0m [0mlen[0m[0;34m([0m[0mdata_string[0m[0;34m)[0m [0;34m!=[0m [0mfound[0m[0;34m.[0m[0mend[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mValueError[0m: time data '2020-03-22' does not match format '%y-%m-%d'
+ValueError: time data '2020-03-22' does not match format '%y-%m-%d'
 
