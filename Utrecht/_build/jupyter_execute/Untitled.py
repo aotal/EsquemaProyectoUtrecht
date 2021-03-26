@@ -95,9 +95,9 @@ plansimple.data_element('InstanceCreationDate').value
 
 plansimple.data_element('SOPInstanceUID').value
 
-plansimple.data_element('TimezoneOffsetFromUTC').value
+print(plansimple.data_element('FractionGroupSequence').value[0])
 
-AS=plansimple.ApplicationSetupSequence[0]
+AS=plansimple.ReferencedStructureSetSequence[0]
 
-AS
+AS.ReferencedSOPInstanceUID
 

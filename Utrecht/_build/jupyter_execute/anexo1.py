@@ -1,9 +1,13 @@
 import pandas as pd
 from myst_nb import glue
+import pydicom as dc
 
 import uuid
 from datetime import datetime
 import pytz
+
+estructura=dc.read_file('Ficheros/EstructuraSimple.dcm')
+plansimple=dc.read_file('Ficheros/PlanSimple.dcm')
 
 # Anexo 1: Creación y exportación Dicom
 
@@ -116,4 +120,6 @@ DiferenciaUTC('US/Pacific')
 
 La lista de tags de secuencia son los siguientes
 
-<ul><li>ApplicationSetupSequence</li><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li></ul>
+<ul><li>FractionGroupSequence</li><li>ReferencedStructureSetSequence</li><li>SourceSequence</li><li>TreatmentMachineSequence</li><li>ApplicationSetupSequence</li></ul>
+
+print(plansimple.data_element('FractionGroupSequence').value[0])
