@@ -168,7 +168,7 @@ Por otra parte veamos ahora el aspecto de cada uno de los ChannelSequence
 
 Secuencia.ChannelSequence[0]
 
-Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El **SourceApplicatorLength** lo podemos obtener a posteriori midiendo la distancia entre cada uno de los puntos de parada. Al **FinalCumulativeTimeWeight** le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al **BrachyControlPointSequence**.
+Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El **SourceApplicatorLength** debe ser mayor que el recorrido total que hace la fuente a través de los canales. Parece que coincide con lo que reconstruimos sobre la imagen. Al **FinalCumulativeTimeWeight** le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al **BrachyControlPointSequence**.
 Siempre tendrá un número par de elementos, veamos un ejemplo:
 
 Secuencia.ChannelSequence[0].BrachyControlPointSequence[6]
