@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herramienta de anotación &#8212; Esquema Proyecto Utrecht</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/ovoid.png"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Identificación del aplicador sobre MRI: Segmentación del aplicador" href="cnn.html" />
+    <link rel="prev" title="Planteamiento del problema" href="content.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/irimed.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Esquema Proyecto Utrecht</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la página..." aria-label="Buscar en la página..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="content.html">
+   Planteamiento del problema
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Herramienta de anotación
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cnn.html">
+     Identificación del aplicador sobre MRI: Segmentación del aplicador
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recon.html">
+     Reconstrucción
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bibliografia.html">
+     Bibliografía
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anexo1.html">
+     Anexo 1: Creación y exportación Dicom
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Parte de la línea de investigación del <a href="http://www.uv.es/radiofisica/index.html">IRIMED</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Anotation_nb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                    title="Modo de pantalla completa"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivo">
+   Motivo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reconstruccion-en-braquiterapia">
+   Reconstrucción en Braquiterapia
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-reconstruccion">
+     Tipos de reconstrucción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistema-de-planificacion-tps">
+     Sistema de planificación (TPS)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pero-que-tiene-que-ver-esto-con-segmentacion">
+   ¿Pero qué tiene que ver esto con segmentación?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diferencias-con-la-segmentacion-habitual">
+   Diferencias con la segmentación habitual.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proceso-de-reconstruccion-con-la-herramienta-desarrollada">
+   Proceso de reconstrucción con la herramienta desarrollada
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#busqueda-de-los-canales-de-la-parte-intracavitaria">
+     Búsqueda de los canales de la parte intracavitaria
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posicionamiento-de-la-parte-intracavitaria">
+   Posicionamiento de la parte intracavitaria
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reconstruccion-de-agujas">
+   Reconstrucción de agujas
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="herramienta-de-anotacion">
+<span id="capitulo-anotation"></span><h1>Herramienta de anotación<a class="headerlink" href="#herramienta-de-anotacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="motivo">
+<h2>Motivo<a class="headerlink" href="#motivo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El desarrollo de una herramienta específica de anotación es necesaria debido a que a diferencia de la segmentación de órganos de riesgo y/o tumores que hacemos para entrenar una red neuronal que identifica estructuras anatómicas, en este caso lo que queremos identificar sobre la imagen es un objeto del que tenemos información constructiva detallada. Dentro de el conjunto de herramientas del planificador de tratamiento (TPS), existe una que nos permite posicionar los aplicadores, llamadas bibliotecas de aplicadores (library applicator), pero al ser un software propietario extraer información para su posterior uso es complicado. Por esta y otra serie de limitaciones, nos decidimos a diseñar una nueva, más a medida de nuestras necesidades.</p>
+</div>
+<div class="section" id="reconstruccion-en-braquiterapia">
+<h2>Reconstrucción en Braquiterapia<a class="headerlink" href="#reconstruccion-en-braquiterapia" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Denominaremos reconstrucción en braquiterapia al proceso mediante el cual identificamos sobre una imágen o en nuestro caso una secuencia de imágenes el camino que seguirá la fuente radiactiva durante el implante.</p>
+<div class="section" id="tipos-de-reconstruccion">
+<h3>Tipos de reconstrucción<a class="headerlink" href="#tipos-de-reconstruccion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El proceso de reconstrucción del aplicador puede realizarse mediante diferentes métodos, según se describe en <span id="id1">[<a class="reference internal" href="bibliografia.html#id3"><span>HKB+10</span></a>]</span>: Planes de Biblioteca (LIB), reconstrucción directa (DR) o una combinación de ambos (Hybrid).</p>
+<ul class="simple">
+<li><p><strong>Reconstrucción directa</strong> (DR) Consiste en la determinación de las trayectorias que seguirá la fuente a través de la identificación de una secuencia de puntos directamente sobre la reconstrucción de las imágenes adquiridas. Para ello, estas trayectorias deben estar lo suficientemente definidas en la imagen como para que podamos tomar la cantidad de puntos suficiente para que sean determinadas con precisión. Además, es muy importante localizar la posición de parada de la fuente más distal, ya que con esta posición y con el sentido de desplazamiento de la fuente establecido por el orden de elección de los puntos, será como el sistema que posiciona la fuente conozca la longitud de hilo que debe sacar en cada momento.</p></li>
+<li><p><strong>Planes de Biblioteca</strong> (LIB) A partir de un conjunto de ficheros que contienen los datos de construcción de los aplicadores (lo que conocemos como una <strong>biblioteca de aplicadores</strong>) tomamos el modelo que hemos implantado en la paciente y lo superponemos sobre la imagen adquirida de la paciente con él implantado. En principio ya no es necesario ver los canales por donde circula la fuente y mucho menos conocer la primera posición de parada. Con conocer la transformación afín que relaciona el sistema de referencia de la biblioteca con el de la imagen adquirida sería suficiente para tener definidos los caminos por donde circulará la fuente. En principio, solo podríamos utilizar este sistema en aquellos aplicadores que son rígidos.</p></li>
+<li><p><strong>Planes Híbridos</strong> (Hybrid) También existe la posibilidad de hacer una reconstrucción mixta: Parte en reconstrucción directa, parte con la ayuda de bibliotecas.</p></li>
+</ul>
+<p>Es este último tipo el que utilizaremos en nuestro caso para la reconstrucción y por tanto para el proceso de anotado de las imágenes.</p>
+</div>
+<div class="section" id="sistema-de-planificacion-tps">
+<h3>Sistema de planificación (TPS)<a class="headerlink" href="#sistema-de-planificacion-tps" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>EL sistema de planificación que utilizamos es Oncentra Brachy que pertenece a la compañía Elekta. El software integra diversos módulos que permiten la planificación del tratamiento desde la adquisición de las imágenes del paciente, hasta la exportación del fichero con la información sobre posiciones que la fuente radiactiva deberá recorrer a lo largo de los canales y el tiempo que deberá permanecer en cada una de las paradas para depositar la dosis necesaria. La reconstrucción de los aplicadores se hace a través de dos módulos: Catheter reconstruction, donde se hace la reconstrucción directa y Applicator placement en el que se elige y se posicionan los aplicadores incluidos en la biblioteca. En el caso de una reconstrucción híbrida se usarían los dos módulos.</p>
+</div>
+</div>
+<div class="section" id="pero-que-tiene-que-ver-esto-con-segmentacion">
+<h2>¿Pero qué tiene que ver esto con segmentación?<a class="headerlink" href="#pero-que-tiene-que-ver-esto-con-segmentacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En principio, el objetivo de la reconstrucción no es representar el aplicador completo, sino solamente los canales por donde circulará la fuente. Pero como tenemos el aplicador posicionado sobre la imagen, la segmentación plano a plano se reduce a hacer cortes en cada una de los cortes de CT/MRI a las imágenes de los aplicadores.</p>
+</div>
+<div class="section" id="diferencias-con-la-segmentacion-habitual">
+<h2>Diferencias con la segmentación habitual.<a class="headerlink" href="#diferencias-con-la-segmentacion-habitual" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En un módulo de segmentación anatómica, un experto delimita la estructura corte a corte o se ayuda de herramientas de AI pre-entrenadas. Por el contrario, para la segmentación de un aplicador mediante bibliotecas de aplicadores, colocamos el modelo del mismo sobre la secuencia de imágenes. Una de las ventajas de tener un modelo tridimensional es que si interpolamos entre dos imágenes de la secuencia para obtener más resolución axial, la segmentación en ese nuevo corte es conocida.</p>
+</div>
+<div class="section" id="proceso-de-reconstruccion-con-la-herramienta-desarrollada">
+<h2>Proceso de reconstrucción con la herramienta desarrollada<a class="headerlink" href="#proceso-de-reconstruccion-con-la-herramienta-desarrollada" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="busqueda-de-los-canales-de-la-parte-intracavitaria">
+<h3>Búsqueda de los canales de la parte intracavitaria<a class="headerlink" href="#busqueda-de-los-canales-de-la-parte-intracavitaria" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="515"
+    height="290"
+    src="https://www.youtube.com/embed/FL8_dLCzlzA"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="posicionamiento-de-la-parte-intracavitaria">
+<h2>Posicionamiento de la parte intracavitaria<a class="headerlink" href="#posicionamiento-de-la-parte-intracavitaria" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="515"
+    height="290"
+    src="https://www.youtube.com/embed/Kd5etPcEsRM"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="reconstruccion-de-agujas">
+<h2>Reconstrucción de agujas<a class="headerlink" href="#reconstruccion-de-agujas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="515"
+    height="290"
+    src="https://www.youtube.com/embed/6aw-_IdMBuI"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Planteamiento del problema</a>
+    <a class='right-next' id="next-link" href="cnn.html" title="next page">Identificación del aplicador sobre MRI: Segmentación del aplicador</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            Esto es solamente un borrador del proyecto
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
