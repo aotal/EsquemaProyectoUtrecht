@@ -323,6 +323,13 @@
        SourceSequence
       </a>
      </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#treatmentmachinesequence">
+     TreatmentMachineSequence
+    </a>
+    <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#applicationsetupsequence">
        ApplicationSetupSequence
@@ -361,7 +368,11 @@
 <h1>Anexo 1: Creación y exportación Dicom<a class="headerlink" href="#anexo-1-creacion-y-exportacion-dicom" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Como proyecto paralelo a la reconstrucción completamente automática y utilizando la herramienta de <a class="reference internal" href="Anotation_nb.html#capitulo-anotation"><span class="std std-ref">anotación</span></a> que hemos desarrollado, podemos utilizar el resultado que proporciona la herramienta para hacer un uso clínico del mismo, es decir, incorporar la reconstrucción realizada al flujo de trabajo. Para ello vamos a investigar la estrura de los ficheros dicom de imágenes y ejemplos de exportación del plan para generar uno que pueda ser importado en Oncentra con la reconstrucción ya hecha.</p>
+<p>Como proyecto paralelo a la reconstrucción completamente automática y utilizando la herramienta de <a class="reference internal" href="Anotation_nb.html#capitulo-anotation"><span class="std std-ref">anotación</span></a> que hemos desarrollado, podemos utilizar el resultado que proporciona la herramienta para hacer un uso clínico del mismo, es decir, incorporar la reconstrucción realizada al flujo de trabajo. Para ello vamos a investigar la estructura de los ficheros dicom de imágenes y ejemplos de exportación del plan para generar uno que pueda ser importado en Oncentra con la reconstrucción ya hecha.</p>
+<div class="tip admonition">
+<p class="admonition-title">Acualización</p>
+<p>Por facilitar la compatibilidad del fichero dicom generado, usaremos como base uno tomado de una exportación de Oncentra, eliminando los campos privados y rellenándolo con nuestros datos</p>
+</div>
 </div>
 <div class="section" id="tags-comunes-entre-imagenes-y-plan">
 <h2>Tags comunes entre imágenes y plan:<a class="headerlink" href="#tags-comunes-entre-imagenes-y-plan" title="Enlazar permanentemente con este título">¶</a></h2>
@@ -508,7 +519,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.1441568779.9438717637.5121565018.306868890&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.3.6.1.4.1.2452.6.2325589604.6301039400.3590785649.865558605&#39;
 </pre></div>
 </div>
 </div>
@@ -543,7 +554,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210518 092423
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20210521 121347
 </pre></div>
 </div>
 </div>
@@ -670,6 +681,20 @@
 </div>
 </div>
 <p>Ignoraremos los private tag data. Para los campos <strong>ReferenceAirKermaRate</strong>,<strong>SourceStrength ReferenceDate</strong> y <strong>SourceStrengthReferenceTime</strong> tenemos dos opciones: O ponemos valores genéricos de fuente, lo más cómodo, o ponemos los valores de la fuente que vayamos a utilizar. Lo demás se puede dejar como en el ejemplo</p>
+</div>
+</div>
+<div class="section" id="treatmentmachinesequence">
+<h3>TreatmentMachineSequence<a class="headerlink" href="#treatmentmachinesequence" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para esta secuencia simplemente pondremos lo que teníamos en el ejemplo pero sin los campos privados</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0008, 1090) Manufacturer&#39;s Model Name           LO: &#39;microSelectron-HDR v2&#39;
+(300a, 00b2) Treatment Machine Name              SH: &#39;mHDR v2c&#39;
+(300b, 0010) Private Creator                     LO: &#39;NUCLETRON&#39;
+(300b, 1005) Private tag data                    DS: &quot;-100662.0&quot;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="applicationsetupsequence">
 <h4>ApplicationSetupSequence<a class="headerlink" href="#applicationsetupsequence" title="Enlazar permanentemente con este título">¶</a></h4>
