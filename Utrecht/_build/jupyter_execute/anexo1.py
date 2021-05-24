@@ -14,7 +14,12 @@ plancomplejo2=dc.read_file('Ficheros/PlanComplejo2.dcm')
 
 ## Introducción
 
-Como proyecto paralelo a la reconstrucción completamente automática y utilizando la herramienta de [anotación](capitulo:anotation) que hemos desarrollado, podemos utilizar el resultado que proporciona la herramienta para hacer un uso clínico del mismo, es decir, incorporar la reconstrucción realizada al flujo de trabajo. Para ello vamos a investigar la estrura de los ficheros dicom de imágenes y ejemplos de exportación del plan para generar uno que pueda ser importado en Oncentra con la reconstrucción ya hecha.
+Como proyecto paralelo a la reconstrucción completamente automática y utilizando la herramienta de [anotación](capitulo:anotation) que hemos desarrollado, podemos utilizar el resultado que proporciona la herramienta para hacer un uso clínico del mismo, es decir, incorporar la reconstrucción realizada al flujo de trabajo. Para ello vamos a investigar la estructura de los ficheros dicom de imágenes y ejemplos de exportación del plan para generar uno que pueda ser importado en Oncentra con la reconstrucción ya hecha.
+
+```{admonition} Acualización
+:class: tip
+Por facilitar la compatibilidad del fichero dicom generado, usaremos como base uno tomado de una exportación de Oncentra, eliminando los campos privados y rellenándolo con nuestros datos
+```
 
 ## Tags comunes entre imágenes y plan: 
 
@@ -142,7 +147,12 @@ Esta secuencia tiene el siguiente aspecto:
 
 print(plansimple.data_element('SourceSequence').value[0])
 
-Ignoraremos los private tag data. Para los campos **ReferenceAirKermaRate**,**SourceStrength ReferenceDate** y **SourceStrengthReferenceTime** tenemos dos opciones: O ponemos valores genéricos de fuente, lo más cómodo, o ponemos los valores de la funete que vayamos a utilizar. Lo demás se puede dejar como en el ejemplo 
+Ignoraremos los private tag data. Para los campos **ReferenceAirKermaRate**,**SourceStrength ReferenceDate** y **SourceStrengthReferenceTime** tenemos dos opciones: O ponemos valores genéricos de fuente, lo más cómodo, o ponemos los valores de la fuente que vayamos a utilizar. Lo demás se puede dejar como en el ejemplo 
+
+### TreatmentMachineSequence
+Para esta secuencia simplemente pondremos lo que teníamos en el ejemplo pero sin los campos privados
+
+print(plansimple.data_element('TreatmentMachineSequence').value[0])
 
 #### ApplicationSetupSequence
 En el ejemplo siguiente los dos primeros tags pueden quedar tal cual.
@@ -163,12 +173,16 @@ TiempoTotal=(Secuencia.ChannelSequence[0].ChannelTotalTime+Secuencia.ChannelSequ
 TotalReferenceAirKerma=ReferenceAirKermaRate*TiempoTotal
 print(TotalReferenceAirKerma)
 
+```{warning}
+Cuidado con la longitud máxima. Los *decimal string* (DS) no deben ocupar más de 16 bytes. Por lo tanto limitaremos el número de decimales. De momento nuestra limitación es de 6 decimales, pero hay que estar atentos por si hay que reducir todavía más ese número. Además de aquí hay que tener mucho cuidado en los tags *ControlPoint3DPosition*
+```
+
 Que como vemos coincide con lo que había en la cabecera. Con respecto al tiempo total, podemos elegir el tiempo que queramos por posición. Este cálculo lo hacemos para que simplemente sea consistente el fichero.
 Por otra parte veamos ahora el aspecto de cada uno de los ChannelSequence
 
 Secuencia.ChannelSequence[0]
 
-Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El **SourceApplicatorLength** debe ser mayor que el recorrido total que hace la fuente a través de los canales. Parece que coincide con lo que reconstruimos sobre la imagen. Al **FinalCumulativeTimeWeight** le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al **BrachyControlPointSequence**.
+Ignoramos como siempre los campos privados. Del tiempo total ya hemos hablado así que lo saltaremos. El **SourceApplicatorLength** debe ser mayor que el recorrido total que hace la fuente a través de los canales. Parece que coincide con lo que reconstruimos sobre la imagen. No obstante, pondremos lo haremos coincidir con la longitud del canal y así evitaremos problemas. En cuanto al **TransferTubeLength**, le daremos un valor de 1000, que son lo que miden los tubos de transferencia de Nucletron. Al **FinalCumulativeTimeWeight** le pasa lo mismo que al tiempo, mientras sea consistente no pasa nada. Vamos ahora al **BrachyControlPointSequence**.
 Siempre tendrá un número par de elementos, veamos un ejemplo:
 
 Secuencia.ChannelSequence[0].BrachyControlPointSequence[6]
